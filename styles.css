@@ -1,11 +1,13 @@
 :root {
   ---bar-height: 100px;
-  --color-primary: #000000;
+  --color-primary: black;
 }
 
 body {
   margin: 0;
 }
+
+/* header */
 
 .header {
   height: 11vh;
@@ -28,7 +30,6 @@ body {
   left: 0;
   width: 100%;
   height: var(---bar-height);
-  
 }
 
 
@@ -42,7 +43,6 @@ body {
 .bar__logo {
   height: 100%;
   float: left;
-  
 }
 
 .bar__nav-toggle {
@@ -94,6 +94,34 @@ div {
   background-color: black;
   margin: 6px 0;
 }
+
+.input-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 300px;
+  background: #af3939;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  color: white;
+  box-shadow: 0.25rem 0.25rem 0rem #054e4e;
+}
+
+.inp-search {
+  margin: 0 0.5rem 0 0.5rem;
+  width: 100%;
+  border: none;
+  outline: none;
+  background: #af3939;
+  color: white;
+}
+
+::placeholder {
+  color: #f0b2a8;
+}
+
+/* Footer */
+
 
 @media screen and (min-width: 767px) {
   .bar__nav-toggle {
