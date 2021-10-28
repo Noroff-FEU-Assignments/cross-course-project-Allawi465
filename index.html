@@ -4,29 +4,33 @@
         <title>My first try at creating a unique website</title>
         <meta name="desciption" content="This is a page to se how my first gonna to look">
         <meta name="viewport" content="widt=device-widt, initial-scale=1.0">
-    
-    </head>
-    <body>
-    <header>
-        <nav>
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="about.html">About</a></li>
-                <li><a href="contact.html">Contact</a></li>
-                
-            </ul>
-        </nav>
+        <script src="https://kit.fontawesome.com/a2e814cf6f.js" crossorigin="anonymous"></script>
+        <link rel="stylesheet" href="styles.css">
+    </head> 
 
-    </header>
-<main>
-  <h1>Welcome to my first Website</h1>
-  <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Earum quos sed labore adipisci nobis placeat expedita illo fugiat! Doloribus maiores, rem necessitatibus nemo iure ea eum earum beatae ad et.</p>
+    <body> 
+     <header class="header">
+        <div class="bar">
+       <div class="bar__content u-centered">
+         <img class="bar__logo" src="images/GameHub.png" alt="GameHublogo">
+            <input type="checkbox" id="inpNavToggle"> 
+            <label class="bar__nav-toggle" for="inpNavToggle"><i class="fas fa-bars"Menu></i></label>
+            <nav class="nav">
+                <a class="nav__link" href="#">Home</a>
+                <a class="nav__link" href="#">Trade</a>
+                <a class="nav__link" href="#">Sign up</a>
+                <a class="nav__link" href="#">contact</a>
+            </nav>
+        </div>
+</header>
+    <main>
+        <div class="input-wrapper">
+            <div class="fas fa-search"></div>
+            <input type="text" placeholder="Search" />
+            <div class="fas fa-times"></div>
+        </div>
 
-</main>
-<footer>
-Copyright &copy;
 
-
-</footer>
+    </main>
     </body>
 </html>
