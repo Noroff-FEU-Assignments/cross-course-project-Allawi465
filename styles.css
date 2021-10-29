@@ -84,13 +84,10 @@ body {
   border-bottom: 1px solid rgba(255, 255, 255, 0.1);
 }
 
+
 .nav__link:hover {
   opacity: 0.8;
   color: #054e4e;
-}
-
-.activ{
-  font-size: bold;
 }
 
 .input-wrapper {
@@ -101,12 +98,12 @@ body {
   background: #070707;
   padding: 1rem;
   border-radius: 0.99rem;
-  color: white;
+  color: rgb(255, 255, 255);
   box-shadow: 0.25rem 0.25rem 0rem #054e4e;
   margin: 0 0.5rem 0 0.5rem;
 }
 
-.inp-search {
+.input-search {
   margin: 0 0.5rem 0 0.5rem;
   width: 100%;
   border: none;
@@ -119,11 +116,42 @@ body {
   color: #ffffff;
 }
 
+.container {
+  max-width: 1170px;
+  margin: auto;
+}
+
+.row{
+  display: flex;
+  flex-wrap: wrap
+}
+
 .footer {
+  background-color: #000000;
   position: fixed;
   bottom: 20px;
+  padding: 30px 0;
   width: 100%;
-  background-color: #111;
+}
+
+.footer-col {
+  padding-left: 6rem;
+  width: 25%;
+}
+
+.footer-col h2 {
+  font-size: 18px;
+  color: #ffffff;
+  text-transform: capitalize;
+  margin-bottom: 30px;
+  position: relative;
+}
+
+.footer-col p{
+  font-size: 15px;
+  color: #ffffff;
+  margin-bottom: 30px;
+  position:initial
 }
 
 .outer-footer {
@@ -134,10 +162,91 @@ body {
   padding: 0px 15px;
   font-size: 18px;
   color: white;
-  background-color: #3f3f3f;
+  background-color:rgb(0, 0, 0);
 }
 
+.footer-col .icon-Gamereward a{
+  display: inline-block;
+  height: 100px;
+  width: 100px;
+  background-color: #222222;
+  margin: 0 10px 0 10px;
+  text-align: center;
+  line-height: 100px;
+  border-end-end-radius: 50%;
+  color: #ffffff;
+  transition: 0.5s ease;
+}
 
+.footer-col .icon-Gamereward a:hover{
+  color: #054e4e
+}
+
+.footer-col .icon-trade a{
+  display: inline-block;
+  height: 100px;
+  width: 100px;
+  background-color: #222222;
+  margin: 0 10px 0 10px;
+  text-align: center;
+  line-height: 100px;
+  border-end-end-radius: 50%;
+  color: #ffffff;
+  transition: 0.5s ease;
+}
+
+.footer-col .icon-trade a:hover{
+  color: #054e4e
+}
+
+.footer-col .icons-contact a{
+  display:inline-block;
+  height: 80px;
+  width: 80px;
+  background-color: #222222;
+  margin: 40 10px 40 10px;
+  text-align: center;
+  line-height: 90px;
+  border-radius: 50%;
+  color: #ffffff;
+  transition: 0.5s ease;
+}
+
+.footer-col .icons-contact a:hover{
+  color: #054e4e
+}
+
+.footer-col .social-links a {
+  display:inline-block;
+  height: 40px;
+  width: 40px;
+  background-color: #222222;
+  margin: 0 10px 0 10px;
+  text-align: center;
+  line-height: 40px;
+  border-radius: 50%;
+  color: #ffffff;
+  transition: 0.5s ease;
+}
+
+.footer-col .social-links a:hover{
+  color: #054e4e
+}
+
+@media (max-width: 767px) {
+  .footer-col {
+    width: 50%;
+    margin-bottom: 30px;
+  }
+  
+}
+
+@media (max-width: px574) {
+  .footer-col {
+    width: 100%;
+  }
+  
+}
 
 @media screen and (min-width: 767px) {
   .bar__nav-toggle {
