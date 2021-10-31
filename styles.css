@@ -4,10 +4,17 @@
 }
 
 body {
+  font-family: "Open Sans", sans-serif;
   margin: 0;
+  height: 180vh;
+  background-color: black;
 }
 
-
+Main{
+  justify-content: space-evenly;
+  display: flex;
+  flex-wrap: wrap;
+}
 
 .header {
   height: 10vh;
@@ -26,7 +33,7 @@ body {
 }
 
 
-.bar {
+.navbar {
   position: fixed;
   z-index: 1;
   top: 0;
@@ -36,31 +43,31 @@ body {
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.15);
 }
 
-.bar--bg {
+.navbar--bg {
   background: var(--color-primary);
 }
 
-.bar__content {
+.navbar__content {
   height: 100%;
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 
-.bar__logo {
+.navbar__logo {
   height: 100%;
 }
 
-.bar__nav-toggle > i {
+.bar__nav-hamburger > i {
   color: #ffffff;
   font-size: 2em;
 }
 
-#inpNavToggle {
+#inpNavHamburger {
   display: none;
 }
 
-#inpNavToggle:checked ~ .nav {
+#inpNavHamburger:checked ~ .nav {
   display: flex;
 }
 
@@ -116,56 +123,305 @@ body {
   color: #ffffff;
 }
 
-.container {
-  max-width: 1170px;
-  margin: auto;
+
+
+
+.column {
+  width: 40%;
+  min-height: 300px;
+  float: left;
+  border: 1px solid rgb(255, 255, 255);
 }
 
-.row{
-  display: flex;
-  flex-wrap: wrap
+.column2 {
+  width: 40%;
+  min-height: 200px;
+  float: left;
+  border: 1px solid rgb(255, 255, 255);
 }
+
+.item-wrapper {
+  margin: 20px;
+  padding: 45px;
+}
+
+.comming-soon-h2{
+  color: #ffffff;
+  text-transform: capitalize;
+  margin-bottom: -100px;
+  position: relative;
+  display: flex;
+  left: 15px;
+}
+
+.top-seller-h2 {
+  color: #ffffff;
+  position: relative;
+  left: 15px;
+}
+
+.deals-h2 {
+  color: #ff0000;
+  position: relative;
+  left: 15px;
+}
+
+.Furious-game {
+  padding-left: 2%;
+}
+
+.Forcelegend-game{
+  padding-right: 2%;
+}
+
+.assassin-game {
+  padding-left: 2%;
+}
+
+.boxer-game {
+  padding-left: 2%;
+}
+
+.Black-game{
+  padding-right: 2%;
+}
+
+
+.pingpong-game {
+  padding-right: 2%;
+}
+
+.Superduber-game {
+  padding-right: 2%;
+}
+
+.pre-order-button {
+  width: 120px;
+  height: 60px;
+  border: 0;
+  border-radius: 30px;
+  cursor: pointer;
+  color: rgb(255, 255, 255);
+  outline: none;
+  background: red;
+  transition: 0.3s;
+}
+
+.pre-order-button:hover {
+  background-color: #000000;
+}
+
+.Buy-Now-button {
+  width: 120px;
+  height: 60px;
+  border: 0;
+  border-radius: 20px;
+  cursor: pointer;
+  color: rgb(255, 255, 255);
+  outline: none;
+  background: red;
+  transition: 0.3s;
+}
+
+.Buy-Now-button:hover {
+  background-color: #000000;
+}
+
+.Buy-Now-button1 {
+  position: relative;
+  left: 8%;
+  top: 10px;
+}
+
+.Buy-Now-button2 {
+  position: relative;
+  left: 22%;
+  top: 10px;
+}
+
+.Buy-Now-button3 {
+  position: relative;
+  left: 36%;
+  top: 10px;
+}
+
+.veiw-all-button-2 {
+  position: relative;
+  left: 80%;
+  top: 10px;
+}
+
+.pre-order-button1 {
+  position: relative;
+  bottom: 20px;
+}
+
+.pre-order-button2 {
+  position: relative;
+  left: 13%;
+  bottom: 20px;
+}
+
+.pre-order-button3 {
+  position: relative;
+  left: 25%;
+  bottom: 20px;
+}
+
+
+.veiw-all-button {
+  width: 120px;
+  height: 60px;
+  border: 0;
+  border-radius: 10px;
+  cursor: pointer;
+  color: rgb(255, 255, 255);
+  outline: none;
+  background: rgb(0, 0, 0);
+  transition: 0.3s;
+}
+
+.veiw-all-button:hover {
+  background-color: #ff0000;
+}
+
+.veiw-all-button-1 {
+  position: relative;
+  left: 62%;
+  top: 10px;
+}
+
+.veiw-all-button2 {
+  width: 120px;
+  height: 60px;
+  border: 0;
+  border-radius: 10px;
+  cursor: pointer;
+  color: rgb(255, 255, 255);
+  outline: none;
+  background: rgb(0, 0, 0);
+  transition: 0.3s;
+}
+
+.veiw-all-button2:hover {
+  background-color: #ff0000;
+}
+
+.pil {
+  border-radius: 25px;
+  border: 2px;
+  padding: 20px; 
+  width: 20px;
+  height: 120px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.pil:hover{
+  background-color: #054e4e;
+}
+
+.move-pil2 {
+  position: relative;
+  bottom: 168px; left: 622px;
+}
+
+.move-pil1 {
+  position: relative;
+  top: 205px; right: 45px;
+}
+
+
+
+
+
 
 .footer {
   background-color: #000000;
   position: fixed;
-  bottom: 20px;
-  padding: 30px 0;
+  height: auto;
+  bottom: 0px;
+  padding: 10px 0;
   width: 100%;
+}
+.container {
+  max-width: 1170px;
+  margin: auto;
+  flex-direction: row;
+}
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
 }
 
 .footer-col {
-  padding-left: 6rem;
-  width: 25%;
+  width: 20%;
 }
+
+.footer-col2{
+  margin-left: -25%;
+}
+
+.footer-col1 .Subz-sign-in {
+  font-size: 14.5px;
+}
+
+.footer-col1 {
+  margin-right: 32%;
+}
+
 
 .footer-col h2 {
-  font-size: 18px;
-  color: #ffffff;
-  text-transform: capitalize;
-  margin-bottom: 30px;
-  position: relative;
-}
-
-.footer-col p{
   font-size: 15px;
   color: #ffffff;
-  margin-bottom: 30px;
-  position:initial
+  text-transform: capitalize;
+  margin-bottom: 10px;
+  position: relative;
+  display: flex;
 }
 
-.outer-footer {
+.footer-col2 h2 {
+  font-size: 15px;
+  color: #ffffff;
+  text-transform: capitalize;
+  margin-bottom: 10px;
+  position: relative;
+  display: flex;
+}
+
+.footer-col1 h2 {
+  font-size: 15px;
+  color: #ffffff;
+  text-transform: capitalize;
+  margin-bottom: 10px;
+  position: relative;
+  display: flex;
+  white-space: nowrap;
+}
+
+.footer-col p {
+  font-size: 12px;
+  color: #ffffff;
+  margin-top: 0;
+  margin-bottom: 30px;
+
+}
+
+.copiright-footer{
   position: fixed;
   bottom: 0px;
-  width: 100%;
+  
   text-decoration: none;
-  padding: 0px 15px;
-  font-size: 18px;
+  padding: 0px 450px;
+  font-size: 15px;
   color: white;
-  background-color:rgb(0, 0, 0);
+  white-space: nowrap;
 }
 
-.footer-col .icon-Gamereward a{
+
+.footer-col .icon-Gamereward a {
   display: inline-block;
   height: 100px;
   width: 100px;
@@ -178,11 +434,11 @@ body {
   transition: 0.5s ease;
 }
 
-.footer-col .icon-Gamereward a:hover{
-  color: #054e4e
+.footer-col .icon-Gamereward a:hover {
+  color: #054e4e;
 }
 
-.footer-col .icon-trade a{
+.footer-col .icon-trade a {
   display: inline-block;
   height: 100px;
   width: 100px;
@@ -195,61 +451,145 @@ body {
   transition: 0.5s ease;
 }
 
-.footer-col .icon-trade a:hover{
-  color: #054e4e
+.footer-col .icon-trade a:hover {
+  color: #054e4e;
 }
 
-.footer-col .icons-contact a{
-  display:inline-block;
-  height: 80px;
-  width: 80px;
+.footer-col .icons-contact a {
+  display: inline-block;
+  height: 100px;
+  width: 100px;
   background-color: #222222;
   margin: 40 10px 40 10px;
   text-align: center;
-  line-height: 90px;
+  line-height: 110px;
   border-radius: 50%;
   color: #ffffff;
   transition: 0.5s ease;
 }
 
-.footer-col .icons-contact a:hover{
-  color: #054e4e
+.footer-col .icons-contact a:hover {
+  color: #054e4e;
 }
 
-.footer-col .social-links a {
-  display:inline-block;
-  height: 40px;
-  width: 40px;
+.footer-col .contact-h2{
+  margin-left: 22%;
+}
+
+.subscribe-section {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 87%;
+  max-width: 350px;
+  background: #054e4e;
+  padding: 0.75rem;
+  border-radius: 2rem;
+  color: rgb(255, 255, 255);
+  margin: 0 5rem 0 5rem;
+}
+
+.subscribe-section .enter-mail {
+  width: 50%;
+  border: none;
+  outline: none;
+  background: #054e4e;
+  color: white;
+}
+
+.subscribe-section .button {
+  width: 120px;
+  height: 35px;
+  border: 0;
+  border-radius: 1.5rem;
+  cursor: pointer;
+  color: rgb(248, 241, 241);
+  outline: none;
+  background-color: #ff0000b9;
+  box-shadow: inset 0 0 0 0 #054e4e;
+  transition: ease-out 0.5s;
+  font-size: 1rem;
+}
+
+.subscribe-section .button:hover {
+  box-shadow: inset 150px 0 0 0 #054e4e;
+}
+
+ .Subz-sign-in {
+   margin-left: 17%;
+   bottom: 10px;
+  white-space: nowrap;
+
+}
+
+.footer-col2 .social-links a {
+  display: inline-block;
+  height: 50px;
+  width: 50px;
   background-color: #222222;
-  margin: 0 10px 0 10px;
+  margin: 0 5px 5px 0;
   text-align: center;
-  line-height: 40px;
+  line-height: 50px;
   border-radius: 50%;
   color: #ffffff;
   transition: 0.5s ease;
 }
 
-.footer-col .social-links a:hover{
-  color: #054e4e
+.footer-col2 .social-links a:hover {
+  color: #054e4e;
 }
 
-@media (max-width: 767px) {
-  .footer-col {
+.footer-col2 .connect-h2{
+  margin-left: 23%;
+}
+
+@media screen and (max-width: 767px) {
+
+  body {
+    height: 350vh;
+  }
+
+  Main{
+    justify-content: space-between;
+    display: flex;
+  }
+  .column {
+    display: flex;
     width: 50%;
-    margin-bottom: 30px;
+    border: none;
+    width: 35%;
   }
-  
+
+  .column2 {
+    display: flex;
+    width: 50%;
+    border: none;
+    width: 35%;
+  }
+  .move-pil1, .move-pil2 {
+    display: none;
+  }
+  .pre-order-button, .Buy-Now-button, .veiw-all-button2, .veiw-all-button {
+    display: none;
+  }
+  .comming-soon-h2 {
+    color: #ffffff;
+  text-transform: capitalize;
+  margin-bottom: 40px;
+  position: relative;
+  }
 }
 
-@media (max-width: px574) {
-  .footer-col {
-    width: 100%;
-  }
-  
+@media screen and (min-width: 767px){
+  .row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+ }
 }
 
-@media screen and (min-width: 767px) {
-  .bar__nav-toggle {
+@media screen and (min-width: 767px){
+  .bar__nav-hamburger {
     display: none;
   }
 

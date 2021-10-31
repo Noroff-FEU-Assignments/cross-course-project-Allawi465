@@ -5,6 +5,9 @@
         <title>My first try at creating a unique website</title>
         <meta name="desciption" content="This is a page to se how my first gonna to look">
         <meta name="viewport" content="widt=device-widt, initial-scale=1.0">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;700&display=swap" rel="stylesheet">
         <script src="https://kit.fontawesome.com/a2e814cf6f.js" crossorigin="anonymous"></script>
         <link rel="stylesheet" href="styles.css">
     </head> 
@@ -12,16 +15,16 @@
     <body>
 
     <header class="header">
-       <div class="bar bar--bg">
-          <div class="bar__content u-centered">
-              <img class="bar__logo" src="images/GameHub.png" alt="GameHublogo">
-                <input type="checkbox" id="inpNavToggle">
+       <div class="navbar navbar--bg">
+          <div class="navbar__content u-centered">
+              <img class="navbar__logo" src="images/GameHub.png" alt="GameHublogo">
+                <input type="checkbox" id="inpNavHamburger">
               <div class="input-wrapper">
                   <div class="fa fa-search"></div>
                   <input class="input-search" type="text" placeholder="Search"/>
                <div class="fa fa-times"></div>
             </div>
-              <label class="bar__nav-toggle" for="inpNavToggle"><i class="fas fa-bars"></i></label>
+              <label class="bar__nav-hamburger" for="inpNavHamburger"><i class="fas fa-bars"></i></label>
               <nav class="nav">
                  <a class="nav__link" href="#"><i class="fa fa-fw fa-home"></i> Home</a>
                  <a class="nav__link" href="#"><i class="fas fa-sync"></i> Trade</a>
@@ -32,17 +35,93 @@
         </div>
   </header>
 
-    <main class="u-centered" style="padding: 30px; font-weight: 500;">
-        <p>
-            Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-        </p>
-    </main>
+<main>
+  <div class="column">
+   <div class="item-wrapper">
+      <h2 class="comming-soon-h2"> Games comming soon</h2>
+      <span class="move-pil1">
+        <button class="pil"><i class="fas fa-chevron-left"></i></button>
+      </span>
+        <div class="games-item">
+        <img class="Black-game" src="images/Black-game.jpg" height="250" alt="Black game item">
+        <img class="Space-war" src="images/Spacewar-game.jpg" height="250" alt="Space war game item">
+        <img class="Furious-game" src="images/Furious-game.jpg" height="250" alt="Furious game item">
+      </div>
+       <span class="move-pil2">
+       <button class="pil"><i class="fas fa-chevron-right"></i></i></button>
+       </span>
+       <span class="pre-order-button1">
+        <button class="pre-order-button">PRE ORDER</button>
+       </span>
+       <span class="pre-order-button2">
+        <button class="pre-order-button">PRE ORDER</button>
+       </span>
+       <span class="pre-order-button3">
+        <button class="pre-order-button">PRE ORDER</button>
+       </span>
+     </div>
+   </div>
+
+    <div class="column">
+      <div class="item-wrapper">
+        <h2 class="top-seller-h2"> TOP SELLER</h2>
+      <div class="games-item">
+        <img class="Forcelegend-game"src="images/Forcelegend-game.jpg" height="250" alt="Forcelegend game item">
+        <img class="Superduber-game" src="images/Superduber-game.jpg" height="250" alt="Super duber game item">
+        <img class="pingpong-game" src="images/pingpong-game.jpg" height="250" alt="ping Pong game item">
+      </div>
+      <span class="Buy-Now-button1">
+        <button class="Buy-Now-button">BUY NOW</button>
+      </span>
+      <span class="Buy-Now-button2">
+        <button class="Buy-Now-button">BUY NOW</button>
+      </span>
+      <span class="Buy-Now-button3">
+        <button class="Buy-Now-button">BUY NOW</button>
+      </span>
+      </div>
+    </div>
+    
+
+    <div class="column2">
+      <div class="item-wrapper">
+        <h2 class="deals-h2">Deals</h2>
+        <div class="games-item">
+          <img class="cyberpunk-game" src="images/cyberpunk-game.jpg" height="250" alt="cyberpunk game item">
+          <img class="assassin-game" src="images/assassin-game.jpg" height="250" alt="assassin game item">
+          <img class="boxer-game" src="images/Boxer-game.jpg" height="250" alt="boxer game item">
+          <span class="veiw-all-button-2">
+            <button class="veiw-all-button2">View All</button>
+          </span>
+        </div>
+        
+      </div>
+     </div>
+
+     <div class="column2">
+      <div class="item-wrapper">
+        <div class="games-item">
+          <img class="Black-game" src="images/Black-game.jpg" height="200" alt="Black game item">
+          <img class="Space-war" src="images/Spacewar-game.jpg" height="200" alt="Space war game item">
+          <img class="Furious-game" src="images/Furious-game.jpg" height="200" alt="Furious game item">
+          <img class="Forcelegend-game" src="images/Forcelegend-game.jpg" height="200" alt="Black game item">
+        <img class="Superduber-game" src="images/Superduber-game.jpg" height="200" alt="superduber game item">
+        <img class="pingpong-game" src="images/pingpong-game.jpg" height="200" alt="ping Pong game item">
+        </div>
+        <span class="veiw-all-button-1">
+          <button class="veiw-all-button">View All</button>
+        </span>
+  
+      </div>
+   </div>
+
+ </main>
 
     <footer class="footer">
         <div class="container">
 
               <div class="row">
-
+                
                    <div class="footer-col">
                      <div class="icon-Gamereward">
                     <a  href="#"><i class="fa fa-fw fa-user fa-2x"></i></a><h2>Game Reward</h2>
@@ -60,35 +139,36 @@
                     <div class="footer-col">
                       <div class="icons-contact">
                         <a  href="#"><i class="fas fa-phone-alt fa-2x"></i></a>
-                        <a  href="#"><i class="far fa-envelope fa-2x"></i></a>   
-                      </div>
-                      <h2>Contact us</h2> 
+                        <a  href="#"><i class="far fa-envelope fa-2x"></i></a>  
+                      </div> 
+                      <h2 class="contact-h2">Contact us</h2>
                     </div>
 
                     
-                  <div class="footer-col">
-                    <div class="subscribe-">
-                      <input type="email" placeholder="Enter your email address" id="footer-email">
-                      <input type="submit" value="Join" id="footer-mail-join">
+                  <div class="footer-col1">
+                    <div class="subscribe-section">
+                      <i class="far fa-envelope"></i>
+                      <input type="email" class="enter-mail" placeholder="Enter your email address">
+                      <input type="submit" class="button" value="Join">
                      </div>
-                      <h2>Sign up to Receive Offer, Coupons, and the Latest Games</h2>
+                      <h2 class="Subz-sign-in">Sign up to Receive Offer, Coupons, and the Latest Games</h2>
                   </div>
 
-                 <div class="footer-col">
+                 <div class="footer-col2">
                    <div class="social-links">
                       <a  href="#"><i class="fab fa-twitch"></i></a>
                       <a  href="#"><i class="fab fa-instagram"></i></a>
                       <a  href="#"><i class="fab fa-facebook"></i></a>
                       <a  href="#"><i class="fab fa-youtube"></i></a>
                     </div>
-                    <h2>Connect with us</h2>
+                    <h2 class="connect-h2">Connect with us</h2>
                  </div>
+
+                 <div class="copiright-footer">
+                  GameHub &copy; Copyright By Mohammed Allawi
+                </div>
          </div>
        </div>
-
-        <div class="outer-footer">
-          GameHub &copy; Copyright By Mohammed Allawi
-        </div>
     </footer>
     </body>
 </html>
