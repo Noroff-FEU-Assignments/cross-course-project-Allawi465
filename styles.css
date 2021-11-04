@@ -1,16 +1,18 @@
+/** @format */
+
 :root {
   ---bar-height: 100px;
   --color-primary: #000000;
 }
 
 body {
-  font-family: "Open Sans", sans-serif;
+  font-family: 'Open Sans', sans-serif;
   margin: 0;
   height: 180vh;
   background-color: black;
 }
 
-Main{
+Main {
   justify-content: space-evenly;
   display: flex;
   flex-wrap: wrap;
@@ -101,7 +103,7 @@ Main{
   display: flex;
   align-items: center;
   justify-content: space-between;
-  width: 300px;
+  width: 250px;
   background: #070707;
   padding: 1rem;
   border-radius: 0.99rem;
@@ -123,8 +125,16 @@ Main{
   color: #ffffff;
 }
 
+.search-input {
+  position: relative;
+  right: 18%;
+}
 
-
+h1 {
+  color: #ffffff;
+  flex: 0 0 100%;
+  text-align: center;
+}
 
 .column {
   width: 40%;
@@ -140,21 +150,20 @@ Main{
   border: 1px solid rgb(255, 255, 255);
 }
 
-.item-wrapper {
-  margin: 20px;
+.games-item {
+  margin: auto;
   padding: 45px;
 }
 
-.comming-soon-h2{
+.comming-soon-h2 {
   color: #ffffff;
   text-transform: capitalize;
   margin-bottom: -100px;
   position: relative;
-  display: flex;
   left: 15px;
 }
 
-.top-seller-h2 {
+.h2-games-titel {
   color: #ffffff;
   position: relative;
   left: 15px;
@@ -166,33 +175,9 @@ Main{
   left: 15px;
 }
 
-.Furious-game {
+.Furious-game, .Forcelegend-game, .assassin-game, .boxer-game, .Black-game, .pingpong-game, .Superduber-game, .Space-war, .cyberpunk-game {
   padding-left: 2%;
-}
-
-.Forcelegend-game{
-  padding-right: 2%;
-}
-
-.assassin-game {
-  padding-left: 2%;
-}
-
-.boxer-game {
-  padding-left: 2%;
-}
-
-.Black-game{
-  padding-right: 2%;
-}
-
-
-.pingpong-game {
-  padding-right: 2%;
-}
-
-.Superduber-game {
-  padding-right: 2%;
+  height: 250px;
 }
 
 .pre-order-button {
@@ -310,40 +295,38 @@ Main{
 .pil {
   border-radius: 25px;
   border: 2px;
-  padding: 20px; 
+  padding: 20px;
   width: 20px;
   height: 120px;
   cursor: pointer;
   transition: 0.3s;
 }
 
-.pil:hover{
+.pil:hover {
   background-color: #054e4e;
 }
 
 .move-pil2 {
   position: relative;
-  bottom: 168px; left: 622px;
+  bottom: 168px;
+  left: 622px;
 }
 
 .move-pil1 {
   position: relative;
-  top: 205px; right: 45px;
+  top: 205px;
+  right: 45px;
 }
-
-
-
-
 
 
 .footer {
   background-color: #000000;
-  position: fixed;
   height: auto;
   bottom: 0px;
   padding: 10px 0;
   width: 100%;
 }
+
 .container {
   max-width: 1170px;
   margin: auto;
@@ -351,16 +334,16 @@ Main{
 }
 
 .row {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-evenly;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
 }
 
 .footer-col {
   width: 20%;
 }
 
-.footer-col2{
+.footer-col2 {
   margin-left: -25%;
 }
 
@@ -409,10 +392,9 @@ Main{
 
 }
 
-.copiright-footer{
-  position: fixed;
+.copiright-footer {
+  position: static;
   bottom: 0px;
-  
   text-decoration: none;
   padding: 0px 450px;
   font-size: 15px;
@@ -472,7 +454,7 @@ Main{
   color: #054e4e;
 }
 
-.footer-col .contact-h2{
+.footer-col .contact-h2 {
   margin-left: 22%;
 }
 
@@ -515,9 +497,9 @@ Main{
   box-shadow: inset 150px 0 0 0 #054e4e;
 }
 
- .Subz-sign-in {
-   margin-left: 17%;
-   bottom: 10px;
+.Subz-sign-in {
+  margin-left: 17%;
+  bottom: 10px;
   white-space: nowrap;
 
 }
@@ -539,7 +521,7 @@ Main{
   color: #054e4e;
 }
 
-.footer-col2 .connect-h2{
+.footer-col2 .connect-h2 {
   margin-left: 23%;
 }
 
@@ -549,46 +531,79 @@ Main{
     height: 350vh;
   }
 
-  Main{
-    justify-content: space-between;
-    display: flex;
-  }
-  .column {
-    display: flex;
-    width: 50%;
-    border: none;
-    width: 35%;
+  Main {
+    justify-content: unset;
+    display: unset;
+    flex-wrap: unset;
   }
 
-  .column2 {
-    display: flex;
-    width: 50%;
+  .column {
+    width: unset;
+    min-height: 300px;
+    float: unset;
     border: none;
-    width: 35%;
   }
-  .move-pil1, .move-pil2 {
+  
+  .column2 {
+    width: unset;
+    min-height: 200px;
+    float: unset;
+    border: none;
+  }
+  
+  .item-wrapper {
+    margin: 20px;
+    padding: 45px;
+  }
+  
+  .item-wrapper {
+    margin: 20px;
+    padding: 45px;
+  }
+
+
+  .pre-order-button,
+  .Buy-Now-button,
+  .veiw-all-button2,
+  .veiw-all-button, .move-pil1,
+  .move-pil2 {
     display: none;
   }
-  .pre-order-button, .Buy-Now-button, .veiw-all-button2, .veiw-all-button {
-    display: none;
-  }
+
   .comming-soon-h2 {
     color: #ffffff;
-  text-transform: capitalize;
-  margin-bottom: 40px;
-  position: relative;
+    text-transform: capitalize;
+    margin-bottom: 40px;
+    position: relative;
   }
 }
 
-@media screen and (min-width: 767px){
-  .row {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-evenly;
- }
+@media screen and (min-width: 767px) {
+  
+  .footer {
+    background-color: #000000;
+    height: auto;
+    bottom: 0px;
+    padding: 10px 0;
+    width: 100%;
+  }
+  
+  .container {
+    max-width: 1170px;
+    margin: auto;
+    flex-direction: row;
+  }
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
+  
 }
 
-@media screen and (min-width: 767px){
+@media screen and (min-width: 767px) {
+  
   .bar__nav-hamburger {
     display: none;
   }
@@ -608,5 +623,8 @@ Main{
 
   .nav__link:not(:last-of-type) {
     margin-right: 24px;
+  }
+  .search-input {
+    position: unset;
   }
 }
