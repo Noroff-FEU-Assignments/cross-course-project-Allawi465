@@ -5,10 +5,11 @@
 
 body {
   background-color: #000000;
-  margin: 0;
+  overflow:scroll
 }
 
 /* header */
+
 
 header {
   height: 10vh;
@@ -56,15 +57,16 @@ header {
   font-size: 2em;
 }
 
+
 #inpNavToggle {
   display: none;
 }
 
-#inpNavToggle:checked ~ .nav {
+#inpNavToggle:checked ~ nav {
   display: flex;
 }
 
-.nav {
+nav {
   display: none;
   flex-direction: column;
   position: fixed;
@@ -91,6 +93,7 @@ header {
 
 /* main */
 
+
 Main {
   max-width: 800px;
   margin: 0 auto;
@@ -98,7 +101,7 @@ Main {
 
 h1 {
   color: #ffffff;
-  text-transform: capitalize;
+  text-transform:uppercase;
   flex: 0 0 100%;
   text-align: center;
 }
@@ -114,6 +117,7 @@ h1 {
   text-transform: capitalize;
   color: #ff0000;
   flex: 0 0 100%;
+  text-align: center;
 }
 
 h3, p {
@@ -124,17 +128,18 @@ h3, p {
 .games-item {
   display: flex;
   flex-wrap: wrap;
-  gap: 10px;
   text-align: center;
+  gap: 10px;
 }
 
 .games-products {
   flex: 1;
-  min-width: 200px;
+  min-width: 110px;
+  
 }
 
 .games-products img {
-  height: 250px;
+  height: 150px;
 }
 
 .pre-order-button {
@@ -146,7 +151,8 @@ h3, p {
   color: rgb(255, 255, 255);
   outline: none;
   background: red;
-  transition: 0.3s;
+  transition-property: background-color;
+  transition-duration: 2s;
 }
 
 .pre-order-button:hover {
@@ -162,27 +168,51 @@ h3, p {
   color: rgb(255, 255, 255);
   outline: none;
   background: red;
-  transition: 0.3s;
+  transition-property: background-color;
+  transition-duration: 2s;
 }
 
 .Buy-Now-button:hover {
   background-color: #000000;
 }
 
+.view-all {
+  color: #ffffff;
+  background: #054e4e;
+  text-decoration: none;
+  font-size: 1.3em;
+  padding: 10px 20px;
+
+  margin-top: 20%;
+  transition-property: background-color;
+  transition-duration: 2s;
+
+}
+
+.view-all:hover {
+  background-color: black;
+}
+
+.view-links {
+  flex: 0 0 100%;
+  text-align: right;
+}
+
+
 /* footer */
+
 
 footer {
   background-color: #000000;
   height: auto;
   bottom: 0px;
-  padding: 10px 0;
+  padding: 50px 0;
   text-align: center;
 }
 
 
 .copiright-footer {
-  position: static;
-  bottom: 0;
+
   text-decoration: none;
   font-size: 15px;
   color: white;
@@ -296,12 +326,13 @@ footer h3 {
 
 /* header @media */
 
+
 @media screen and (min-width: 767px) {
   .bar__nav-toggle {
     display: none;
   }
 
-  .nav {
+  nav {
     display: initial;
     position: static;
     width: unset;
@@ -319,9 +350,12 @@ footer h3 {
   }
 }
 
+
+
 /* main @media */
 
-@media screen and (min-width: 767px) {
+
+@media screen and (min-width: 747px) {
   .games-item {
     display: flex;
     flex-wrap: wrap;
@@ -334,7 +368,7 @@ footer h3 {
   }
   
   .games-products img {
-    height: 320px;
+    height: 330px;
   }
 
   .h2-games-titel, .deals-h2, .h2-games-titel-1 {
@@ -343,6 +377,7 @@ footer h3 {
 }
 
 /* footer @media */
+
 
 @media screen and (min-width: 767px) {
 
@@ -355,11 +390,8 @@ footer h3 {
   .footer-container2 {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-evenly;;
+    justify-content: space-evenly;
   }
 
-  .Subz-sign-in {
-    display: flex;
-  }
-  
+
 }
