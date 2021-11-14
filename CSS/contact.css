@@ -4,8 +4,7 @@ body {
   }
   
   /* header */
-  
-  
+
   header {
     height: 10vh;
     display: flex;
@@ -85,141 +84,72 @@ body {
     opacity: 0.8;
     color:  #054e4e;
   }
-
-  .fa-user {
-    color: #054e4e;
- }
-
-
+    
   /* main */
-
   Main {
     max-width: 800px;
     margin: 0 auto;
   }
 
-  .games-item {
-    display: flex;
-    flex-wrap: wrap;
-    text-align: center;
-    gap: 10px;
-    position: relative;
-    top: -80px;
-  }
-  
-  .games-products {
-    flex: 1;
-    min-width: 110px;
-  }
-
-  .games-products-trade {
-    min-width: 110px;
-  }
-
-  .games-products-trade img {
-    height: 150px;
-    max-width: 100%;
-  }
-  
-  .games-products img  {
-    height: 150px;
-    max-width: 100%;
-  }
-
   h1 {
     color: #ffffff;
-    text-transform:capitalize;
-    flex: 0 0 100%;
     text-align: center;
+    margin-bottom: 10%;
   }
 
-  .style-h1 {
-    padding: 25px 0px;
-    position: relative;
-    top: -50px;
-    margin-bottom: 10px;
-  }
-
-
-  .purchases-h2, .trades-h2 {
-      color: #ffffff;
-      flex: 0 0 100%;
-      text-align: left;
-      border-top: 1px solid rgb(255, 255, 255);
-      padding-top: 20px;
-  }
-
-   .credit-p, h3{
-      color: #ffffff;
-      text-align: center;
-  }
-
-  .credit-h2 {
-    color: #000000;
-    text-align: center;
-  }
-
-  .style-h2{
-      background-color: #8FA690;
-      padding: 10px 0;
-      border-radius: 10px;
-    }
-
-    .h2-border {
-     padding: 10px;
-     position: relative;
-     top: -80px;
-    }
-
-  .style-credit-p{
-      background-color: rgb(0, 0, 0);
-      padding: 10px 0;
-      border-radius: 50px;
-      margin: 20px 50px 20px;
-  }
-
-  .trade-button {
-    text-decoration: none;
+  .contact-h2, .contact-p {
     color: #ffffff;
+  }
+
+  .fa-1x {
+    padding-right: 10px;
+  }
+
+.max-2000 {
+  color: #ffffff;
+  text-align: end;
+  font-size: 10px;
+}
+
+  .section-style{
     display: block;
-    top: -120px;
-    text-align: end;
-    position: relative;
-    padding-right: 20px;
   }
 
-  .trade-button:hover {
-    text-decoration: underline;
+  .input-style {
+    display: inline-block
   }
 
-  .sign-out-button {
-    display: block;
-    text-align: center;
-    text-decoration: none;
-    color: #000000;
+  input[type=name-contact], input[type=email-contact], input[type=ordernumber] {
+    width: 100%;
+    font-size: 10px;
+    padding: 10px 10px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid rgb(255, 255, 255);
+    box-sizing: border-box;
   }
 
-  .sign-out-style {
-    background-color: #ffffff;
-    padding: 20px 0;
-    border-radius: 20px;
-    margin-left: 100px;
-    margin-right: 100px;
-    position: relative;
-    top: -30px;
+  .login {
+    background-color: #054e4e;
+    color: rgb(255, 255, 255);
+    font-size: 20px;
+    padding: 10px 10px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+
   }
 
 
   /* footer */
-
-footer {
+  footer {
     background-color: #000000;
     padding-top: 10%;
     height: auto;
     bottom: 0px;
     text-align: center;
   }
-  
   
   .copiright-footer {
     text-decoration: none;
@@ -332,7 +262,10 @@ footer {
     box-shadow: inset 150px 0 0 0 #ff0505be;
   }
   
+  
+  
   /* header @media */
+  
   
   @media screen and (min-width: 767px) {
     .bar__nav-toggle {
@@ -357,40 +290,31 @@ footer {
     }
   }
   
+  
+  
   /* main @media */
-  
   @media screen and (min-width: 747px) {
-    .games-item {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 20px;
+    Main {
+      text-align: center;
     }
     
-    .games-products {
-      flex: 1;
-      min-width: 250px;
-    }
-    
-    .games-products img {
-      height: 330px;
-    }
-    .games-products-trade img {
-      height: 330px;
-    }
-
-    .style-credit-p{
-      margin: 20px 250px 20px;
-  }
-
-    .sign-out-style {
-      margin-left: 250px;
-      margin-right: 250px;
+    input[type=name-contact], input[type=email-contact], input[type=ordernumber] {
+      width: 70%;
     }
   
+    .login {
+      width: 50%;
+  
+    }
+
+    .max-2000 {
+      text-align:center
+    }
+
+    
   }
   
   /* footer @media */
-
   @media screen and (min-width: 767px) {
   
     .footer-container {

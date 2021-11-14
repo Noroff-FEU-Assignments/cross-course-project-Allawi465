@@ -86,6 +86,10 @@ body {
     color:  #054e4e;
   }
 
+  .fa-sync {
+    color: #054e4e;
+  }
+
   /* main */
 
 Main {
@@ -96,17 +100,18 @@ Main {
   .trade-section {
     display: block
   }
-  
- h1, .trade-h2 {
+
+  h1, .trade-h2   {
     color: #ffffff;
     text-align: center;
     text-transform: capitalize;
- }
+  }
+  
 
  .trade-p {
-     color: #ffffff;
-     margin-bottom: 5%;
-     text-align: center;
+    color: #ffffff;
+    margin-bottom: 5%;
+    text-align: center;
  }
 
  .nr1-style{
@@ -123,19 +128,19 @@ Main {
  }
 
  .trade-style {
-    background-color: #244052;
+    background-color: #054D4D;
     padding-bottom: 5px;
     padding-top: 1px;
     border: 10px solid black;
  }
 
  .trade-link {
-     color: #ffffff;
-     text-decoration: none;
-     display: block;
-     text-align: center;
-     font-size: 2.rem;
-     text-transform: capitalize;
+    color: #ffffff;
+    text-decoration: none;
+    display: block;
+    text-align: center;
+    font-size: 2.rem;
+    text-transform: capitalize;
  }
 
  .trade-link-style {
@@ -145,7 +150,7 @@ Main {
     border-radius: 10px;
  }
   
-  /* footer */
+           /* footer */
   footer {
     background-color: #000000;
     padding-top: 10%;
@@ -266,9 +271,7 @@ Main {
   }
   
   
-  
-  /* header @media */
-  
+       /* header @media */
   
   @media screen and (min-width: 767px) {
     .bar__nav-toggle {
@@ -295,7 +298,7 @@ Main {
   
   
   
-  /* main @media */
+        /* main @media */
   
   
   @media screen and (min-width: 747px) {
@@ -313,8 +316,7 @@ Main {
   }
   
   /* footer @media */
-  
-  
+
   @media screen and (min-width: 767px) {
   
     .footer-container {

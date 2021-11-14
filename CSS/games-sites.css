@@ -105,7 +105,7 @@ Main {
   }
 
   .new-deals-p {
-    color: rgb(173, 71, 71);
+    color: #FF8869;
   }
 
   .home-pre-order:hover{
@@ -134,7 +134,6 @@ Main {
     padding-top: 20px;
   }
   
-
   .cart-link{
     background: #054e4e;
     font-size: 1.3em;
