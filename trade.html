@@ -15,23 +15,34 @@
     <script
       src="https://kit.fontawesome.com/a2e814cf6f.js"
       crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="CSS\trade.css"/>
+    <link rel="stylesheet" href="CSS\styles.css"/>
   </head>
   <body>
     <header>
-       <div class="navbar navbar--bg">
-          <div class="navbar__content navbar-centered">
-             <img class="bar__logo" src="images/GameHub.png" alt="GameHublogo">
-              <input type="checkbox" id="inpNavToggle"> 
-              <label class="bar__nav-toggle" for="inpNavToggle"><i class="fas fa-bars"></i></label>
-               <nav>
-                <a class="nav__link" href="index.html"><i class="fa fa-fw fa-home"></i> Home</a>
-                <a class="nav__link" href="trade.html"><i class="fas fa-sync"></i>  Trade</a>
-                <a class="nav__link" href="sign-in.html"><i class="fa fa-fw fa-user"></i>Sign In</a>
-                <a class="nav__link" href="cart.html"><i class="fas fa-shopping-cart"></i> Cart</a>
-              </nav>
-          </div>
-        </div>
+      <div class="topHeader">
+        <a href="index.html"> <img class="bar__logo" src="images/GameHub.png" alt="GameHub logo"></a>
+        <div class="hamburger">
+          <div class="first"></div>
+          <div class="second"></div>
+          <div class="third"></div>
+      </div>
+        <nav>
+          <ul>
+            <li>
+              <a class="nav__link" href="index.html"><i class="fa fa-fw fa-home"></i> Home</a>
+            </li>
+            <li>
+              <a class="nav__link" href="trade.html"><i class="fas fa-sync"></i>Trade</a>
+            </li>
+            <li>
+              <a class="nav__link" href="sign-in.html"><i class="fa fa-fw fa-user"></i>Sign In</a>
+            </li>
+            <li>
+              <a class="nav__link" href="cart.html"><i class="fas fa-shopping-cart"></i> Cart</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
     </header>
     <main>
         <h1>How trades work</h1>
@@ -121,5 +132,7 @@
                <div class="copiright-footer">
               GameHub &copy; Copyright By Mohammed Allawi
               </div>
-       </footer>
+      </footer>
+      <script src="js/index.js" type="module"></script>
   </body>
+</html>
