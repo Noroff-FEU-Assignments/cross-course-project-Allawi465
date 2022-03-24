@@ -100,8 +100,6 @@ i {
 /* main */
 
 Main {
-  max-width: 1020px;
-  margin: 0 auto;
   padding: 1rem;
 }
 
@@ -176,17 +174,16 @@ h3, p {
   border: 0;
   border-radius: 30px;
   cursor: pointer;
-  color: rgb(255, 255, 255);
+  color: rgb(0, 0, 0);
   outline: none;
-  background: #990000;
+  background-color: rgba(228, 33, 33, 0.837);
   transition-property: background-color;
   transition-duration: 1s;
 }
 
 .pre-order-button:hover {
-  background-color: #000000;
+  background-color: #4B7490;
 }
-
 
 .top-site {
   color: #000000;
@@ -206,20 +203,20 @@ h3, p {
   border: 0;
   border-radius: 20px;
   cursor: pointer;
-  color: rgb(255, 255, 255);
+  color: #000000;
   outline: none;
-  background: #990A00;
+  background-color: rgba(230, 23, 23, 0.837);
   transition-property: background-color;
   transition-duration: 1s;
 }
 
 .Buy-Now-button:hover {
-  background-color: #000000;
+  background-color: #4B7490;
 }
 
 .view-all {
   color: #ffffff;
-  background: #054e4e;
+  background: #4B7490;
   text-decoration: none;
   font-size: 1.3em;
   padding: 10px 20px;
@@ -246,7 +243,7 @@ h3, p {
 
 .about-link{
   text-decoration: none;
-  background: #054e4e;
+  background: #4B7490;
   font-size: 1.3em;
   display: block;
   padding: 10px 35px;
@@ -261,17 +258,9 @@ h3, p {
   text-decoration: underline white;
 }
 
-.cart-link{
-  background: #054e4e;
-  font-size: 1.3em;
-  display: block;
-  padding: 10px 20px;
-  transition-property: background-color;
-  transition-duration: 1s;
-}
-
-.cart-link:hover {
-  background-color: rgb(255, 0, 0);
+.detailsA {
+  color: white;
+  text-decoration: none;
 }
 
 h2, .comming-soon-p {
@@ -281,6 +270,7 @@ h2, .comming-soon-p {
 main h3 {
   color: #000000;
   text-align: center;
+  margin-top: 50px;
 }
 
 .gameplay-p, .gameplay, .gameplay-p2 {
@@ -300,11 +290,6 @@ main h3 {
   border-bottom: 1px solid rgb(0, 0, 0);
 }
 
-a {
-  text-decoration: none;
-  color: rgb(255, 255, 255);
-}
-
 .item-images {
   height: 300px;
   max-width: 100%;
@@ -312,7 +297,7 @@ a {
 }
   
 .cart-link{
-  background: #054e4e;
+  background: #4B7490;
   font-size: 1.3em;
   display: block;
   padding: 10px 20px;
@@ -322,11 +307,11 @@ a {
 }
   
 .cart-link:hover {
-  background-color: rgb(255, 0, 0);
+  background-color: rgba(228, 33, 33, 0.837);
 }
 
-  .trade-link{
-  background: #054e4e;
+.trade-link{
+  background: #4B7490;
   font-size: 1.3em;
   display: block;
   padding: 10px 35px;
@@ -376,7 +361,7 @@ a {
 
 .trade-style {
   text-align: center;
-  background-color: #054D4D;
+  background-color: #4B7490;
   padding-bottom: 5px;
   padding-top: 1px;
   padding: 1rem;
@@ -398,6 +383,126 @@ a {
   border-radius: 10px;
 }
 
+.home-pre-order {
+  color: #000000;
+  font-weight: bolder;
+}
+
+.homeLink {
+  color: #033030;
+  text-decoration: none;
+}
+
+.join-gamehub {
+  color: #000000;
+  font-size: 15px;
+  text-align: center;
+  margin-top: 5%;
+}
+
+.form-container {
+  padding: 10px;
+}
+
+b {
+  color: #000000;
+  font-size: 15px;
+}
+
+input[type=text], input[type=password] {
+  width: 100%;
+  font-size: 13px;
+  padding: 10px 10px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid rgb(0, 0, 0);
+  border-radius: 10px;
+  box-sizing: border-box;
+}
+
+.login {
+  background-color: #4B7490;
+  color: white;
+  font-size: 20px;
+  padding: 10px 10px;
+  margin: 8px 0;
+  border-radius: 10px;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+}
+
+.forget-passord {
+  color: #000000;
+  display: block;
+  text-align: center;
+}
+
+.create-now {
+  display: block;
+  text-align: center;
+  text-decoration: none;
+  font-size: 20px;
+  color: white;
+}
+
+.create-now-style {
+  background-color: #054e4e;
+  padding: 10px 10px;
+  margin: 10px 35px 20px;
+  border-radius: 10px;
+}
+
+.formMain {
+  max-width: 550px;
+  padding: 1rem;
+  margin: 50px auto;
+  border:  1px solid black;
+}
+
+.container-form{
+  max-width: 90%;
+  margin-top: 50px;
+}
+
+label {
+  display:block;
+  margin-top: 20px;
+}
+
+.formError {
+  display: none;
+  font-size: 14px;
+  margin-top: 5px;
+  color: red;
+}
+
+input {
+  width: 100%;
+  margin-top: 7px;
+  padding: 12px;
+  font-size: 16px;
+}
+
+.submit {
+  margin-top: 20px;
+  border: none;
+  padding: 1.2rem;
+  width: 150px;
+  background: #4B7490;
+  border-radius: 8px;
+  font-size: 20px;
+  color: #ffff;
+}
+
+.message {
+  color: #ffff;
+  border-radius: 10px;
+  padding: 1rem;
+  background: #4B7490;
+  font-size: 22px;
+}
+
 /* footer */
 
 footer {
@@ -405,7 +510,6 @@ footer {
   padding-top: 10px;
   text-align: center;
 }
-
 
 .copiright-footer {
   text-decoration: none;
@@ -436,14 +540,6 @@ footer h3 {
   transition: 0.5s ease;
 }
 
-.icon-Gamereward a:hover {
-  color: #054e4e;
-}
-
-.icon-trade a:hover {
-  color: #054e4e;
-}
-
 .icons-contact a {
   display: inline-block;
   height: 100px;
@@ -455,10 +551,6 @@ footer h3 {
   border-radius: 50%;
   color: #ffffff;
   transition: 0.5s ease;
-}
-
-.icons-contact a:hover {
-  color: #054e4e;
 }
 
 .social-links a {
@@ -475,11 +567,7 @@ footer h3 {
   margin-top: 20px;
 }
 
-.social-links a:hover {
-  color: #054e4e;
-}
-
-@media screen and (min-width: 962px) {
+@media screen and (min-width: 832px) {
 
   /* media queries for the header*/
 
@@ -522,8 +610,6 @@ footer h3 {
     font-weight: lighter;
     font-size: 18px;
     color: #ffffff;
-    opacity: unset;
-
   }
 
   .hamburger {
@@ -531,7 +617,7 @@ footer h3 {
   }
 
   .links-site {
-    color: #033030;
+    color: #4B7490;
     text-decoration: none;
     white-space: nowrap;
     margin-top: 25px;
@@ -541,27 +627,33 @@ footer h3 {
 
   /* main @media */
 
+  Main {
+    max-width: 1020px;
+    margin: 0 auto;
+    padding: 1rem;
+  }
+
  .games-item {
-  grid-auto-flow: column;
-  gap: 1em;
+   grid-auto-flow: column;
+    gap: 1em;
  }
 
  .ViewAll-item, .gameViewAll-item {
-  grid-template-columns: 1fr 1fr 1fr;
-  gap: 1em;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 1em;
  }
 
  .link_titel {
-  max-width: 92%;
+    max-width: 92%;
  }
 
  .games-products {
-  min-width: 250px;
-  text-align: center;
+    min-width: 250px;
+    text-align: center;
  }
 
  .games-products img {
-  height: 400px;
+    height: 400px;
  }
 
  .h2-games-titel, .deals-h2, .h2-games-titel-1 {
@@ -569,14 +661,18 @@ footer h3 {
  }
 
  h1 {
- font-size: 2rem;
+  font-size: 2rem;
  }
 
  .trade-link-style {
-  margin: 10px 250px 20px;
-  border-radius: 10px;
+    margin: 10px 250px 20px;
+    border-radius: 10px;
   }
 
+  .home-pre-order, .homeLink {
+    display: none;
+  }
+  
  /* footer @media */
 
  .footer-container {

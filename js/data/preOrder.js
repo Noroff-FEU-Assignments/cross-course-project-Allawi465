@@ -16,7 +16,7 @@ export function createHTMLPreOder(products) {
                                             <h3>${products[i].status}</h3>
                                             <p>${products[i].price}</P>
                                             <span class="about-link">
-                                            <a href="about-games.html?id=${products[i].id}" class="pre-links">About</a>
+                                            <a href="details.html?id=${products[i].id}" class="pre-links">About</a>
                                              </span>
                                             <span class="cart-link">
                                              <a href="" class="pre-links">Add to cart</a>

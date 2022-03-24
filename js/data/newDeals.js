@@ -15,7 +15,7 @@ export function createHTMLDeals(products) {
                                             <h2>${products[i].name}</h2>
                                             <p>${products[i].price}</P>
                                             <span class="about-link">
-                                            <a href="about-games.html" class="pre-links">About</a>
+                                            <a href="details.html" class="pre-links">About</a>
                                              </span>
                                             <span class="cart-link">
                                              <a href="#" class="pre-links">Add to cart</a>

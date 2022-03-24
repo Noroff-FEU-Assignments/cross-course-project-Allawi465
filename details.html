@@ -17,7 +17,7 @@
       crossorigin="anonymous"></script>
     <link rel="stylesheet" href="CSS\styles.css"/>
   </head>
-  <Body>
+  <body>
     <header>
       <div class="topHeader">
         <a href="index.html"> <img class="bar__logo" src="images/GameHub.png" alt="GameHub logo"></a>
@@ -35,7 +35,7 @@
               <a class="nav__link" href="trade.html"><i class="fas fa-sync"></i>Trade</a>
             </li>
             <li>
-              <a class="nav__link" href="sign-in.html"><i class="fa fa-fw fa-user"></i>Sign In</a>
+              <a class="nav__link" href="signIn.html"><i class="fa fa-fw fa-user"></i>Sign In</a>
             </li>
             <li>
               <a class="nav__link" href="cart.html"><i class="fas fa-shopping-cart"></i> Cart</a>
@@ -44,14 +44,51 @@
         </nav>
       </div>
     </header>
-    <main>
-      <a href="index.html" class="home-pre-order">Home / New Deals</a>
-      <h1>New Deals</h1>
-      <div class="gameViewAll-item">
-
-      </div>
-    </main>
-    <footer>
+     <main>
+        <a href="index.html" class="home-pre-order">Home</a>
+        <span class="homeLink">/ Description</span>
+        <h1>Game Description</h1>
+        <div class="games-item">
+          <div class="games-products">
+            <img
+              class="item-images"
+              src="images/Black-game.jpg"
+              alt="Black game item"/>
+            <h2>Black</h2>
+            <p class="comming-soon-p">Comming Soon</p>
+            <span class="cart-link">
+              <a href="#" class="detailsA">Add to cart</a>
+            </span>
+           <span class="trade-link">
+              <a href="#" class="detailsA">Trade in</a>
+           </span>
+           <h3>Product Description</h3>
+           <p class="product-description">
+              After a chemincal in 2027, the world has been occupied by zombies.
+           </p>
+           <p class="product-description">
+              A retired Black OPS agent has to collect a team and save the world before it is too late.
+            <p class="product-description">
+              But not everyone is as willing to help.
+            </p>
+           <h3> Specifications </h3>
+           <p class="gameplay">Gameplay</p>
+           <div class="Specifications-p">
+              <p class="gameplay-p">Number of players</p>
+              <p class="gameplay-p2">1-2</p>
+           </div>
+           <div class="Specifications-p">
+              <p class="gameplay-p">Online Mulitplayer</p>
+              <p class="gameplay-p2">2-4</p>
+           </div>
+           <div class="Specifications-p">
+              <p class="gameplay-p">Number of Online Players</p>
+              <p class="gameplay-p2">10-12</p>
+           </div>
+         </div>
+       </div>
+     </main>
+     <footer>
       <div class="footer-container">
           <div class="footer-col">
             <div class="icon-Gamereward">
@@ -86,7 +123,7 @@
             GameHub &copy; Copyright By Mohammed Allawi
           </div>
      </footer>
-    <script src="js/data/newDeals.js" type="module"></script>
-    <script src="js/index.js" type="module"></script>
-  </Body>
-</html>
+     <script src="js/data/details.js" type="module"></script>
+     <script src="js/index.js" type="module"></script>
+  </body>
+  </html>

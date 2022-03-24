@@ -16,7 +16,7 @@
       crossorigin="anonymous"></script>
     <link rel="stylesheet" href="CSS\styles.css"/>
   </head>
-  <Body>
+  <body>
     <header>
       <div class="topHeader">
         <a href="index.html"> <img class="bar__logo" src="images/GameHub.png" alt="GameHub logo"></a>
@@ -34,7 +34,7 @@
               <a class="nav__link" href="trade.html"><i class="fas fa-sync"></i>Trade</a>
             </li>
             <li>
-              <a class="nav__link" href="sign-in.html"><i class="fa fa-fw fa-user"></i>Sign In</a>
+              <a class="nav__link" href="signIn.html"><i class="fa fa-fw fa-user"></i>Sign In</a>
             </li>
             <li>
               <a class="nav__link" href="cart.html"><i class="fas fa-shopping-cart"></i> Cart</a>
@@ -43,13 +43,24 @@
         </nav>
       </div>
     </header>
-    <main>
-      <a href="index.html" class="home-pre-order">Home / All Games</a>
-      <h1>All Games</h1>
-       <div class="ViewAll-item">
-
-      </div> 
-    </main>
+    <Main>
+        <h1>Sign in</h1>
+         <div class="form-container">
+             <form action="/action_page.php" method="post">
+              <label for="username"><b>GameHub account name</b></label> 
+              <input type="text" placeholder="Enter Username" name="username">
+              <label for="password"><b>Password</b></label>
+              <input type="password" placeholder="Enter Password" name="password">
+              <div class="button-log">
+              <button type="submit" class="login">Login</button>
+              <span class="forget-passord">Forgot you <a href="#">password?</a></span>
+              </div>
+            </div>
+            <h2 class="join-gamehub">Join GameHub and try Thousands of games to play</h2>
+            <div class="create-now-style">
+                <a href="my-side.html" class="create-now"> Create Now </a>
+            </div>
+    </Main>
     <footer>
       <div class="footer-container">
           <div class="footer-col">
@@ -85,7 +96,6 @@
             GameHub &copy; Copyright By Mohammed Allawi
           </div>
      </footer>
-    <script src="js/data/allGames.js" type="module"></script>
-    <script src="js/index.js" type="module"></script>
-  </Body>
-</html>
+     <script src="js/index.js" type="module"></script>
+  </body>
+  </html>
