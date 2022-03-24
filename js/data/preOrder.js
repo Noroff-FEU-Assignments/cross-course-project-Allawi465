@@ -1,27 +1,28 @@
 import { products } from "../data/products.js"
 
-export function createHTML(products) {
-    const productContainer = document.querySelector(".games-item");
+export function createHTMLPreOder(products) {
+      const productContainer = document.querySelector(".gameViewAll-item");
 
         for (let i = 0; i < products.length; i++) {
 
-            if (i === 3) {
-              break;
-            }
+          if (i === 3) {
+            break;
+          }
 
-           productContainer.innerHTML += `<div class="games-products">
+          productContainer.innerHTML += `<div class="games-products">
                                             <img class="item-images"
                                              src="${products[i].image}"/>
                                             <h2>${products[i].name}</h2>
+                                            <h3>${products[i].status}</h3>
                                             <p>${products[i].price}</P>
                                             <span class="about-link">
-                                            <a href="about-games.html" class="pre-links">About</a>
+                                            <a href="about-games.html?id=${products[i].id}" class="pre-links">About</a>
                                              </span>
                                             <span class="cart-link">
-                                             <a href="#" class="pre-links">Add to cart</a>
+                                             <a href="" class="pre-links">Add to cart</a>
                                             </span>
                                         </div>`; 
         }
 };
 
-createHTML(products);
+createHTMLPreOder(products);

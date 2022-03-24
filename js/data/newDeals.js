@@ -1,7 +1,7 @@
 import { products } from "../data/products.js"
 
-export function createHTML(products) {
-    const productContainer = document.querySelector(".games-item");
+export function createHTMLDeals(products) {
+    const productContainer = document.querySelector(".gameViewAll-item");
 
         for (let i = 6; i < products.length; i++) {
 
@@ -24,4 +24,4 @@ export function createHTML(products) {
         }
 };
 
-createHTML(products);
+createHTMLDeals(products);
