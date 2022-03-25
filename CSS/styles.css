@@ -104,7 +104,6 @@ main {
   padding: 1rem;
 }
 
-
 h1 {
   color: #000000;
   text-transform:uppercase;
@@ -116,16 +115,17 @@ h1 {
 .link_titel {
   justify-content: space-between;
   display: flex;
-  max-width: 75%;
+  max-width: 98%;
 }
 
 .links-site {
-  color: #033030;
+  color: #4B7490;
   text-decoration: none;
   white-space: nowrap;
   margin-top: 25px;
   font-weight: bolder;
   font-size: 17px;
+  display: inline-flex;
 }
 
 .links-site:hover {
@@ -135,15 +135,12 @@ h1 {
 .h2-games-titel, .h2-games-titel-1 {
   color: #000000;
   text-transform: capitalize;
-  flex: 0 0 100%;
-  text-align: left;
+
 }
 
 .deals-h2 {
   text-transform: capitalize;
   color: #000000;
-  flex: 0 0 100%;
-  text-align: center;
 }
 
 h3, p {
@@ -637,7 +634,7 @@ footer h3 {
  }
 
  .link_titel {
-    max-width: 92%;
+    max-width: 98%;
  }
 
  .games-products {
