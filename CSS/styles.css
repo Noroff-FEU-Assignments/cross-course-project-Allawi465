@@ -100,7 +100,6 @@ i {
 /* main */
 
 main {
-  
   padding: 1rem;
 }
 
@@ -396,10 +395,6 @@ main h3 {
   margin-top: 5%;
 }
 
-.form-container {
-  padding: 10px;
-}
-
 b {
   color: #000000;
   font-size: 15px;
@@ -626,7 +621,6 @@ footer h3 {
   main {
     max-width: 940px;
     margin: auto;
-    padding: 1rem;
   }
 
  .games-item, .games-item2, .games-item3, .games-item4 {
@@ -663,6 +657,11 @@ footer h3 {
 
   .home-pre-order, .homeLink {
     display: none;
+  }
+
+  .about-link, .cart-link {
+    margin: unset;
+    margin-bottom: 5px;
   }
   
  /* footer @media */
