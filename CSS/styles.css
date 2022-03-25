@@ -99,7 +99,9 @@ i {
 
 /* main */
 
-Main {
+main {
+  max-width: 1200px;
+  margin: auto;
   padding: 1rem;
 }
 
@@ -149,7 +151,7 @@ h3, p {
   color: #000000;
 }
 
-.games-item, .gameViewAll-item, .ViewAll-item {
+.games-item, .gameViewAll-item, .games-item2, .ViewAll-item, .games-item3, .games-item4 {
   display: grid;
   grid-auto-flow: row;
   gap: 1em;
@@ -157,13 +159,12 @@ h3, p {
 }
 
 .games-products {
- margin-bottom: 20px ;
- min-width: 250px;
+ margin-bottom: 20px;
  text-align: center;
 }
 
 .games-products img {
-  height: 400px;
+  height: 200px;
   max-width: 100%;
   object-fit: cover;
 }
@@ -270,7 +271,6 @@ h2, .comming-soon-p {
 main h3 {
   color: #000000;
   text-align: center;
-  margin-top: 50px;
 }
 
 .gameplay-p, .gameplay, .gameplay-p2 {
@@ -291,9 +291,8 @@ main h3 {
 }
 
 .item-images {
-  height: 300px;
-  max-width: 100%;
-  padding-top: 20px;
+  height: 200px;
+  background-repeat: no-repeat;
 }
   
 .cart-link{
@@ -567,7 +566,7 @@ footer h3 {
   margin-top: 20px;
 }
 
-@media screen and (min-width: 832px) {
+@media screen and (min-width: 954px) {
 
   /* media queries for the header*/
 
@@ -627,14 +626,8 @@ footer h3 {
 
   /* main @media */
 
-  Main {
-    max-width: 1020px;
-    margin: 0 auto;
-    padding: 1rem;
-  }
-
- .games-item {
-   grid-auto-flow: column;
+ .games-item, .games-item2, .games-item3, .games-item4 {
+    grid-template-columns: 1fr 1fr 1fr;
     gap: 1em;
  }
 
@@ -648,12 +641,12 @@ footer h3 {
  }
 
  .games-products {
-    min-width: 250px;
+    min-width: 300px;
     text-align: center;
  }
 
  .games-products img {
-    height: 400px;
+    height: 200px;
  }
 
  .h2-games-titel, .deals-h2, .h2-games-titel-1 {
