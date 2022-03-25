@@ -9,18 +9,18 @@ export function topSeller(data) {
             break;
         }
         topSeller.innerHTML += `<div class="games-products">
-                                <div class="item-images" style="background-image: url('${data[i].thumbnail}')"></div>
-                                <h3>${data[i].title}</h3>
-                                <p>Our top sellers game</p>
-                                <span class="buttons-border">
-                                <button class="pre-order-button">PRE ORDER</button>
-                                </span>
+                                    <img class="item-images" src="${data[i].thumbnail}"/>
+                                    <h3>${data[i].title}</h3>
+                                    <p>Our top sellers game</p>
+                                    <span class="buttons-border">
+                                        <button class="pre-order-button">Buy Now</button>
+                                    </span>
                                 </div>`; 
     }
 };
 
 export function allTopSeller(data) {
-    const games = document.querySelector(".gameViewAll-item");
+    const games = document.querySelector(".games-item");
 
     games.innerHTML = "";
 
@@ -31,14 +31,15 @@ export function allTopSeller(data) {
         }
 
         games.innerHTML += `<div class="games-products">
-                                            <div class="item-images" style="background-image: url('${data[i].thumbnail}')"></div>
-                                            <h3>${data[i].title}</h3>
-                                            <p>159,- nok</P>
-                                            <span class="about-link">
-                                            <a href="href="details.html?id=${data[i].id}" class="pre-links">About</a>
-                                            <span class="cart-link">
-                                             <a href="#" class="pre-links">Add to cart</a>
-                                            </span>
-                                        </div>`; 
-        }
+                                <img class="item-images" src="${data[i].thumbnail}"/>
+                                <h3>${data[i].title}</h3>
+                                <p>159,- nok</P>
+                                <span class="about-link">
+                                    <a href="href="details.html?id=${data[i].id}" class="pre-links">About</a>
+                                </span>
+                                <span class="cart-link">
+                                 <a href=" "class="pre-links">Add to cart</a>
+                                </span>
+                            </div>`;
+    }
 };

@@ -1,4 +1,4 @@
-import { createHTMLDetails } from "../details/createhtml.js";
+import { createHTMLDetails } from "./createhtml.js";
 
 const queryString = document.location.search;
 

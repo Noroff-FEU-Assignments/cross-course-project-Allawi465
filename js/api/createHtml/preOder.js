@@ -9,19 +9,19 @@ export function commingSoon(data) {
             break;
         }
         commingSoon.innerHTML += `<div class="games-products">
-                                        <div class="item-images" style="background-image: url('${data[i].thumbnail}')"></div>
-                                        <h3>${data[i].title}</h3>
-                                        <p>Comming Soon</p>
-                                        <span class="buttons-border">
-                                        <button class="pre-order-button">PRE ORDER</button>
-                                        </span>
-                                    </div>`; 
+                                    <img class="item-images" src="${data[i].thumbnail}"/>
+                                    <h3>${data[i].title}</h3>
+                                    <p>Comming Soon</p>
+                                    <span class="buttons-border">
+                                      <button class="pre-order-button">PRE ORDER</button>
+                                    </span>
+                                  </div>`; 
     }
 };
 
 export function allPreOder(data) {
 
-    const productContainer = document.querySelector(".gameViewAll-item");
+    const productContainer = document.querySelector(".games-item");
 
     productContainer.innerHTML = "";
 
@@ -32,15 +32,15 @@ export function allPreOder(data) {
         }
 
         productContainer.innerHTML += `<div class="games-products">
-                                            <div class="item-images" style="background-image: url('${data[i].thumbnail}')"></div>
-                                            <h3>${data[i].title}</h3>
-                                            <p>159,- nok</P>
-                                            <span class="about-link">
+                                          <img class="item-images" src="${data[i].thumbnail}"/>
+                                          <h3>${data[i].title}</h3>
+                                          <p>159,- nok</P>
+                                          <span class="about-link">
                                             <a href="details.html?id=${data[i].id}" class="pre-links">About</a>
-                                             </span>
-                                            <span class="cart-link">
-                                             <a href="#" class="pre-links">Add to cart</a>
-                                            </span>
+                                          </span>
+                                          <span class="cart-link">
+                                           <a href="#" class="pre-links">Add to cart</a>
+                                          </span>
                                         </div>`; 
       }
 };  

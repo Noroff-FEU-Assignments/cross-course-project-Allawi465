@@ -18,7 +18,8 @@ async function getGames() {
         ViewAllGames(data)
         
     } catch(error) {
-        /* resultCotainer.innerHTML = `<p> An error occurred when calling the API</p>` */
+        resultCotainer.innerHTML = `<p> An error occurred when calling the API</p>`
+        console.log(error);
     }
 };
 
