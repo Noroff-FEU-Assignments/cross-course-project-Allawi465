@@ -37,8 +37,8 @@ export function allDeals(data) {
                                                     <a href="href="details.html?id=${data[i].id}" class="pre-links">About</a>
                                                 </span>
                                                 <span class="cart-link">
-                                                    <a href=" "class="pre-links">Add to cart</a>
-                                                </span>
+                                                <button href=" "class="pre-links">Add to cart</button>
+                                               </span>
                                             </div>`; 
         }
 };

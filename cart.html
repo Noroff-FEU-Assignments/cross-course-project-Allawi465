@@ -46,19 +46,15 @@
     </header>
     <Main>
         <h1> Your Cart</h1>
-        <section class="cart-section">
-        <div class="cart-style">
-                <h2 class="game-name">Black</h2>
-                <div class="add-more1">-</div>
-                <div class="number-item">1</div>
-                <div class="add-more">+</div>
-                <p class="price-tag">399,-Nok</p>
-            </span>
+        <div class="cart-container">
+          <div class="product">
+            <h3>product</h3>
+            <h3>Price</h3>
+            <h3>Quantity</h3>
+            </div>
         </div>
-        </section>
         <section class="cart-section">
             <div class="cart-contonue">
-             <form action="/action_page.php" method="post"></form>
              <input type="text" placeholder="Email:" name="username">
              <input type="password" placeholder="Password:" name="password">
              <button type="submit" class="login">continue </button>
@@ -101,6 +97,7 @@
             GameHub &copy; Copyright By Mohammed Allawi
           </div>
      </footer>
+     <script src="js\api\createHtml\AddCart.js" type="module"></script>
      <script src="js/index.js" type="module"></script>
    </body>
   </html>

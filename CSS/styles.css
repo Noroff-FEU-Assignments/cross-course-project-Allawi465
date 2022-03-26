@@ -312,6 +312,7 @@ main h3 {
   transition-property: background-color, text-decoration;
   transition-duration: 1s;
   margin: 5px 50px 5px;
+  white-space: nowrap;
 }
   
 .trade-link:hover {
@@ -494,6 +495,40 @@ input {
   font-size: 22px;
 }
 
+.product {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+  border-bottom: 1px solid black;
+  flex-wrap: wrap;
+}
+
+.cart-style {
+  display: flex;
+  flex-wrap: nowrap;
+  margin-top: 10px;
+  border: 1px solid black;
+}
+
+.add-more1, .add-more {
+  color: #00000096;
+  font-size: 1.5rem;
+  padding: 10px;
+  text-align: center;
+}
+
+.number-item {
+  color: #00000096;
+  font-size: 1.5rem;
+  padding: 10px;
+}
+
+.price {
+  padding-right: 20px;
+  margin-top: 22px;
+}
+
+
 /* footer */
 
 footer {
@@ -621,6 +656,10 @@ footer h3 {
   main {
     max-width: 940px;
     margin: auto;
+  }
+
+  .price {
+    padding-right: 50px;
   }
 
  .games-item, .games-item2, .games-item3, .games-item4 {

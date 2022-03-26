@@ -39,7 +39,7 @@ export function allPreOder(data) {
                                             <a href="details.html?id=${data[i].id}" class="pre-links">About</a>
                                           </span>
                                           <span class="cart-link">
-                                           <a href="#" class="pre-links">Add to cart</a>
+                                          <button href=" "class="pre-links">Add to cart</button>
                                           </span>
                                         </div>`; 
       }

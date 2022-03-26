@@ -1,20 +1,8 @@
 
 
-  .fa-shopping-cart {
-    color: #054e4e;
- }
-  /* main */
 
-Main {
-    max-width: 500px;
-    margin: 0 auto;
-    background-color: #3D3D3D;
-  }
 
-  .cart-style {
-      display: inline-flex;
-      flex-wrap: nowrap;
-  }
+
 
   h1 {
       color: #ffffff;
