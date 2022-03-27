@@ -237,6 +237,9 @@ h3, p {
 .pre-links {
   text-decoration: none;
   color: white;
+  background-color: unset;
+  border: unset;
+  font-size: 18px;
 }
 
 .about-link{
@@ -259,13 +262,16 @@ h3, p {
 
 .cart-link{
   background: #4B7490;
-  font-size: 1.3em;
   display: block;
   padding: 10px 20px;
   transition-property: background-color;
   transition-duration: 1s;
   margin-bottom: 10px;
   margin: 5px 50px 5px;
+}
+
+.cart-title, .price {
+  margin-top: 40px;
 }
   
 .cart-link:hover {
@@ -301,6 +307,13 @@ main h3 {
 .item-images {
   height: 200px;
   background-repeat: no-repeat;
+  object-fit: cover;
+}
+
+.cartImages {
+  height: 90px;
+  background-repeat: no-repeat;
+  object-fit: cover;
 }
   
 
@@ -375,30 +388,7 @@ main h3 {
 
 .trade-link-style {
   padding: 10px 10px;
-  margin: 10px 35px 20px;
   border-radius: 10px;
-}
-
-.home-pre-order {
-  color: #000000;
-  font-weight: bolder;
-}
-
-.homeLink {
-  color: #033030;
-  text-decoration: none;
-}
-
-.join-gamehub {
-  color: #000000;
-  font-size: 15px;
-  text-align: center;
-  margin-top: 5%;
-}
-
-b {
-  color: #000000;
-  font-size: 15px;
 }
 
 input[type=text], input[type=password] {
@@ -422,6 +412,28 @@ input[type=text], input[type=password] {
   border: none;
   cursor: pointer;
   width: 100%;
+}
+
+.home-pre-order {
+  color: #000000;
+  font-weight: bolder;
+}
+
+.homeLink {
+  color: #033030;
+  text-decoration: none;
+}
+
+.join-gamehub {
+  color: #000000;
+  font-size: 15px;
+  text-align: center;
+  margin-top: 5%;
+}
+
+b {
+  color: #000000;
+  font-size: 15px;
 }
 
 .forget-passord {
@@ -470,7 +482,7 @@ label {
 }
 
 input {
-  width: 100%;
+  width: 97%;
   margin-top: 7px;
   padding: 12px;
   font-size: 16px;
@@ -485,6 +497,14 @@ input {
   border-radius: 8px;
   font-size: 20px;
   color: #ffff;
+  cursor: pointer;
+}
+
+.as-guest {
+  color: black;
+  margin-top: 10px;
+  display: inline-block;
+  padding-left: 10px;
 }
 
 .message {
@@ -498,9 +518,20 @@ input {
 .product {
   display: flex;
   justify-content: space-between;
-  padding: 10px;
-  border-bottom: 1px solid black;
   flex-wrap: wrap;
+  margin-bottom: 20px;
+}
+
+.total-container {
+  margin-top: 20px;
+  border-top: 1px solid black;
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+}
+
+.total {
+  margin-top: 20px;
 }
 
 .cart-style {
@@ -510,24 +541,11 @@ input {
   border: 1px solid black;
 }
 
-.add-more1, .add-more {
-  color: #00000096;
-  font-size: 1.5rem;
-  padding: 10px;
-  text-align: center;
-}
-
 .number-item {
   color: #00000096;
   font-size: 1.5rem;
   padding: 10px;
 }
-
-.price {
-  padding-right: 20px;
-  margin-top: 22px;
-}
-
 
 /* footer */
 
@@ -654,12 +672,25 @@ footer h3 {
   /* main @media */
 
   main {
-    max-width: 940px;
     margin: auto;
+  }
+
+  .cartMain {
+    margin: unset;
+  } 
+
+  .cartContainer {
+    max-width: 50%;
+    margin: auto;
+  }
+
+  .cart-container {
+    margin-bottom: 20px;
   }
 
   .price {
     padding-right: 50px;
+    width: 70px;
   }
 
  .games-item, .games-item2, .games-item3, .games-item4 {
@@ -680,6 +711,11 @@ footer h3 {
  .games-products img {
     height: 200px;
  }
+
+ .cartImages {
+  height: 120px;
+}
+  
 
  .h2-games-titel, .deals-h2, .h2-games-titel-1 {
   display: flex;

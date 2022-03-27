@@ -1,3 +1,5 @@
+import { getItemProduct, saveProduct } from "../../localStorage/localStorage.js"
+
 export function topSeller(data) {
     const topSeller = document.querySelector(".games-item2");
 
@@ -26,6 +28,9 @@ export function allTopSeller(data) {
 
     for (let i = 6 ; i < data.length; i++) {
 
+        const id = data[i].thumbnail
+        const name = data[i].title
+
         if (i === 9 ) {
             break;
         }
@@ -38,8 +43,34 @@ export function allTopSeller(data) {
                                     <a href="href="details.html?id=${data[i].id}" class="pre-links">About</a>
                                 </span>
                                 <span class="cart-link">
-                                 <button href=" "class="pre-links">Add to cart</button>
+                                    <button class="pre-links" data-id="${id}" data-title="${name}">Add to cart</button>
                                 </span>
                             </div>`;
-    }
+    };
+
+    const adButton = document.querySelectorAll(".pre-links");
+
+    adButton.forEach((button) => {
+        button.addEventListener("click", onClick);
+    });
+        
+    function onClick() {
+        const name = this.dataset.title;
+        const id = this.dataset.id;
+
+        const currentProduct = getItemProduct();
+
+        const ItemExists = currentProduct.find(function(item) {
+            return item.name === name;
+        })
+    
+        if (ItemExists === undefined) {
+            const product = { name: name, id: id };
+            currentProduct.push(product);
+            saveProduct(currentProduct);
+        } else {
+            const newProduct = currentProduct.filter(item => item.id !== id);
+            saveProduct(newProduct);
+        }
+    } 
 };

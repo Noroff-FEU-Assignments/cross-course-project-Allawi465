@@ -1,4 +1,5 @@
-import { allTopSeller } from "./createHtml/topSeller.js";
+import { allDeals } from "../createHtml/newDeals.js";
+
 
 const url = fetch("https://free-to-play-games-database.p.rapidapi.com/api/games", {
     "headers": {
@@ -15,8 +16,8 @@ async function getGames() {
 
         console.log(data);
 
-        allTopSeller(data);
-
+        allDeals(data)
+        
     } catch(error) {
         /* resultCotainer.innerHTML = `<p> An error occurred when calling the API</p>` */
     }

@@ -1,4 +1,4 @@
-import { getItemProduct } from "../createHtml/cart.js"
+import { getItemProduct, saveProduct } from "../../localStorage/localStorage.js"
 
 export function allGames(data) {
     
@@ -57,23 +57,23 @@ export function ViewAllGames(data) {
     });
         
     function onClick() {
-            const name = this.dataset.title;
-            const id = this.dataset.id;
-            
+        const name = this.dataset.title;
+        const id = this.dataset.id;
+
+        const currentProduct = getItemProduct();
+
+        const ItemExists = currentProduct.find(function(item) {
+            return item.name === name;
+        })
     
-            console.log(id, name);
-
-            const currentProduct = getItemProduct();
-            console.log();
-
-            const product = { id: id, name: name };
-
+        if (ItemExists === undefined) {
+            const product = { name: name, id: id };
             currentProduct.push(product);
-
             saveProduct(currentProduct);
+        } else {
+            const newProduct = currentProduct.filter(item => item.id !== id);
+            saveProduct(newProduct);
+        }
+            
     } 
 };
-
-function saveProduct(item) {
-    localStorage.setItem("adToCart", JSON.stringify(item))
-}

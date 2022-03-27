@@ -8,6 +8,10 @@ export function getItemProduct() {
     }
 }
 
+export function saveProduct(item) {
+    localStorage.setItem("adToCart", JSON.stringify(item))
+}
+
 
 /* const productContainer = document.querySelector(".product-container");
 

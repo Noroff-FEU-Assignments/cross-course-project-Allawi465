@@ -1,5 +1,4 @@
-import { getItemProduct } from "../createHtml/cart.js"
-
+import { getItemProduct, saveProduct } from "../localStorage/localStorage.js"   
 
 const url = fetch("https://free-to-play-games-database.p.rapidapi.com/api/games", {
     "headers": {
@@ -35,13 +34,18 @@ if (item.length === 0) {
 
 item.forEach(item => {
     productContainer.innerHTML += `<div class="product">
-                                     <h3 class="cart-title">${item.name}</h3>
-                                     <p class="price">159,- nok</P>
-                                     <div class="cart-style">
-                                    <div class="add-more1">-</div>
-                                    <div class="number-item">1</div>
-                                    <div class="add-more">+</div>
-                                    </div>
-                                    </div>
-                                    `;
+                                        <img class="cartImages" src="${item.id}"/>
+                                        <p class="cart-title">${item.name}</p>
+                                        <span class="price">159,- nok</span>
+                                    </div>`;
 });
+
+const totalPrice = document.querySelector(".totalPrices");
+
+const totalPrices = addThePrices();
+
+function addThePrices() {
+  return 159 * item.length;
+}
+
+totalPrice.innerHTML = totalPrices;

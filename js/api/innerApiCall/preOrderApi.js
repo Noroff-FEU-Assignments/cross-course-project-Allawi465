@@ -1,4 +1,4 @@
-import { ViewAllGames } from "./createHtml/allGames.js"
+import { allPreOder } from "../createHtml/preOder.js";
 
 const url = fetch("https://free-to-play-games-database.p.rapidapi.com/api/games", {
     "headers": {
@@ -15,10 +15,9 @@ async function getGames() {
 
         console.log(data);
 
-        ViewAllGames(data)
+        allPreOder(data)
         
     } catch(error) {
-        resultCotainer.innerHTML = `<p> An error occurred when calling the API</p>`
         console.log(error);
     }
 };
