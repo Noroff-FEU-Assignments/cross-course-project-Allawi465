@@ -14,7 +14,7 @@ export function commingSoon(data) {
             break;
         }
         commingSoon.innerHTML += `<div class="games-products">
-                                    <img class="item-images" src="${data[i].thumbnail} alt="cover-image for the game""/>
+                                    <img class="item-images" src="${data[i].thumbnail}" alt="cover-image for the game"/>
                                     <h3>${data[i].title}</h3>
                                     <p>Comming Soon</p>
                                     <span class="buttons-border">
