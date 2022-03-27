@@ -24,6 +24,7 @@ async function getGamesInfo() {
 }
 catch(error) {
     messageCotainer.innerHTML = `<p> An error occurred when showing the Games</p>`
+    console.log(error)
 }
 };
 

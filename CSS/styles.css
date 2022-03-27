@@ -240,7 +240,7 @@ h3, p {
   margin-top: 10px;
 }
 
-.pre-links, .addToCart, .goCart {
+.pre-links, .addToCart, .goCart, .aboutLink {
   text-decoration: none;
   color: white;
   background-color: unset;
@@ -251,7 +251,7 @@ h3, p {
 .about-link{
   text-decoration: none;
   background: #4B7490;
-  font-size: 1.3em;
+  font-size: 1em;
   display: block;
   padding: 10px 35px;
   transition-property: background-color, text-decoration;
@@ -688,13 +688,18 @@ footer h3 {
     margin: auto;
   }
 
-  .cartMain, .signInn, .signInn {
+  .cartMain, .signInn, .signInn, .detailsMain {
     margin: unset;
     min-height: unset;
   } 
 
   .cartContainer {
     max-width: 40%;
+    margin: auto;
+  }
+
+  .games-details {
+    max-width: 30%;
     margin: auto;
   }
 

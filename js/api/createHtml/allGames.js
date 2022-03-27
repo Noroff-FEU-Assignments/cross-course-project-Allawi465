@@ -42,7 +42,7 @@ export function ViewAllGames(data) {
                                 <h3>${data[i].title}</h3>
                                 <p>159,- nok</P>
                                 <span class="about-link">
-                                    <a href="details.html?id=${data[i].id}" class="pre-links">About</a>
+                                    <a href="details.html?id=${data[i].id}" class="aboutLink">About</a>
                                 </span>
                                 <span class="cart-link">
                                     <button class="pre-links" data-id="${id}" data-title="${name}">Add to cart</button>

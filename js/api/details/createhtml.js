@@ -2,16 +2,16 @@ import { getItemProduct, saveProduct } from "../../localStorage/localStorage.js"
 
 export function createHTMLDetails(data) {
     const productContainer = document.querySelector(".games-details");
-   const id = data.thumbnail
+    const image = data.thumbnail
 
     productContainer.innerHTML = `<div class="games-products">
                                     <img class="item-images" src="${data.thumbnail}"/>
                                     <h2>${data.title}</h2>
                                     <span class="cart-link">
-                                       <button class="addToCart" data-id="${id}" data-title="${data.title}">Add to cart</button>
+                                       <button class="addToCart" data-id="${image}" data-title="${data.title}">Add to cart</button>
                                     </span>
                                     <span class="trade-link">
-                                       <a href="trade.html" class="pre-links">Trade in</a>
+                                       <a href="trade.html" class="aboutLink">Trade in</a>
                                     </span>
                                     <h3>Product Description</h3>
                                     <p class="product-description">${data.short_description}</p>
@@ -31,22 +31,23 @@ export function createHTMLDetails(data) {
                                     </div>
                                  </div>`;
 
-   const adButton = document.querySelectorAll(".addToCart");
+        const adButton = document.querySelectorAll(".addToCart");
 
-    adButton.forEach((button) => {
-        button.addEventListener("click", onClick);
-    });
+        adButton.forEach((button) => {
+            button.addEventListener("click", onClick);
+        });
+
         
-    function onClick() {
+        function onClick() {
         const name = this.dataset.title;
         const id = this.dataset.id;
-
-        const currentProduct = getItemProduct();
-
-        const ItemExists = currentProduct.find(function(item) {
-            return item.name === name;
-        })
     
+        const currentProduct = getItemProduct();
+    
+        const ItemExists = currentProduct.find(function(item) {
+                return item.name === name;
+        })
+        
         if (ItemExists === undefined) {
             const product = { name: name, id: id };
             currentProduct.push(product);
@@ -54,7 +55,7 @@ export function createHTMLDetails(data) {
         } else {
             const newProduct = currentProduct.filter(item => item.id !== id);
             saveProduct(newProduct);
-        }  
-    } 
+        }
+    }
 
 };
