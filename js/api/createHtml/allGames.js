@@ -18,7 +18,7 @@ export function allGames(data) {
                                     <span class="view-links">
                                         <a href="details.html?id=${data[i].id}" class="view-all">View Game</a>
                                     </span>
-                                    </div>`; 
+                               </div>`; 
     }
 };
 
