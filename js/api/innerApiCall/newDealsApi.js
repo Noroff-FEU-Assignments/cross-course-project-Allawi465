@@ -1,5 +1,6 @@
 import { allDeals } from "../createHtml/newDeals.js";
 
+const messageCotainer = document.querySelector(".error-message");
 
 const url = fetch("https://free-to-play-games-database.p.rapidapi.com/api/games", {
     "headers": {
@@ -14,12 +15,10 @@ async function getGames() {
         
         const data = await response.json();
 
-        console.log(data);
-
         allDeals(data)
         
     } catch(error) {
-        /* resultCotainer.innerHTML = `<p> An error occurred when calling the API</p>` */
+        messageCotainer.innerHTML = `<p> An error occurred when showing the Games</p>`
     }
 };
 

@@ -1,5 +1,7 @@
 import { createHTMLDetails } from "./createhtml.js";
 
+const messageCotainer = document.querySelector(".error-message");
+
 const queryString = document.location.search;
 
 const params = new URLSearchParams(queryString);
@@ -21,7 +23,7 @@ async function getGamesInfo() {
     createHTMLDetails(data);
 }
 catch(error) {
-    console.log(error);
+    messageCotainer.innerHTML = `<p> An error occurred when showing the Games</p>`
 }
 };
 

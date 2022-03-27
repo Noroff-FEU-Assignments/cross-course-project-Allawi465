@@ -103,6 +103,7 @@ i {
 
 main {
   padding: 1rem;
+  min-height: 50vh;
 }
 
 h1 {
@@ -687,8 +688,9 @@ footer h3 {
     margin: auto;
   }
 
-  .cartMain, .signInn {
+  .cartMain, .signInn, .signInn {
     margin: unset;
+    min-height: unset;
   } 
 
   .cartContainer {
