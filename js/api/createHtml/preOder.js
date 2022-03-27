@@ -14,7 +14,7 @@ export function commingSoon(data) {
             break;
         }
         commingSoon.innerHTML += `<div class="games-products">
-                                    <img class="item-images" src="${data[i].thumbnail}"/>
+                                    <img class="item-images" src="${data[i].thumbnail} alt="cover-image for the game""/>
                                     <h3>${data[i].title}</h3>
                                     <p>Comming Soon</p>
                                     <span class="buttons-border">
@@ -66,7 +66,7 @@ export function allPreOder(data) {
       }
 
       productContainer.innerHTML += `<div class="games-products">
-                                          <img class="item-images" src="${data[i].thumbnail}"/>
+                                          <img class="item-images" src="${data[i].thumbnail}" alt="cover-image for the game"/>
                                           <h3>${data[i].title}</h3>
                                           <p>159,- nok</P>
                                           <span class="about-link">

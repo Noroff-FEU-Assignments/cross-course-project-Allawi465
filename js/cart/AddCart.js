@@ -34,7 +34,7 @@ if (item.length === 0) {
 
 item.forEach(item => {
     productContainer.innerHTML += `<div class="product">
-                                        <img class="cartImages" src="${item.id}"/>
+                                        <img class="cartImages" src="${item.id}" alt="cover-image for the game"/>
                                         <p class="cart-title">${item.name}</p>
                                         <span class="price">159,- nok</span>
                                     </div>`;

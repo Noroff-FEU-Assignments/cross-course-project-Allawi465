@@ -5,7 +5,7 @@ export function createHTMLDetails(data) {
     const image = data.thumbnail
 
     productContainer.innerHTML = `<div class="games-products">
-                                    <img class="item-images" src="${data.thumbnail}"/>
+                                    <img class="item-images" src="${data.thumbnail}" alt="cover-image for the game"/>
                                     <h2>${data.title}</h2>
                                     <span class="cart-link">
                                        <button class="addToCart" data-id="${image}" data-title="${data.title}">Add to cart</button>

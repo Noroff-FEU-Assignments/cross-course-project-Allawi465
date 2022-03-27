@@ -65,7 +65,7 @@ export function allTopSeller(data) {
         }
 
         games.innerHTML += `<div class="games-products">
-                                <img class="item-images" src="${data[i].thumbnail}"/>
+                                <img class="item-images" src="${data[i].thumbnail}" alt="cover-image for the game"/>
                                 <h3>${data[i].title}</h3>
                                 <p>159,- nok</P>
                                 <span class="about-link">

@@ -12,7 +12,7 @@ export function allGames(data) {
             break;
         }
         allGames.innerHTML += `<div class="games-products">
-                                    <img class="item-images" src="${data[i].thumbnail}"/>
+                                    <img class="item-images" src="${data[i].thumbnail}" alt="cover-image for the game"/>
                                     <h3>${data[i].title}</h3>
                                     <p>Let the gaming begin.</p>
                                     <span class="view-links">
@@ -38,7 +38,7 @@ export function ViewAllGames(data) {
         }
         
         games.innerHTML += `<div class="games-products">
-                                <img class="item-images" src="${data[i].thumbnail}"/>
+                                <img class="item-images" src="${data[i].thumbnail}" alt="cover-image for the game"/>
                                 <h3>${data[i].title}</h3>
                                 <p>159,- nok</P>
                                 <span class="about-link">
