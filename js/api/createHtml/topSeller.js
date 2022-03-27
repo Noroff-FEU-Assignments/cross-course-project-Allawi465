@@ -7,6 +7,9 @@ export function topSeller(data) {
 
     for (let i = 6 ; i < data.length; i++) {
 
+        const id = data[i].thumbnail
+        const name = data[i].title
+
         if (i === 9 ) {
             break;
         }
@@ -15,10 +18,36 @@ export function topSeller(data) {
                                     <h3>${data[i].title}</h3>
                                     <p>Our top sellers game</p>
                                     <span class="buttons-border">
-                                        <button class="pre-order-button">Buy Now</button>
+                                        <button class="buy-button" data-id="${id}" data-title="${name}">Buy Now</button>
                                     </span>
                                 </div>`; 
     }
+
+    const adButton = document.querySelectorAll(".buy-button");
+
+    adButton.forEach((button) => {
+      button.addEventListener("click", onClick);
+    });
+        
+    function onClick() {
+    const name = this.dataset.title;
+    const id = this.dataset.id;
+
+    const currentProduct = getItemProduct();
+
+    const ItemExists = currentProduct.find(function(item) {
+      return item.name === name;
+    })
+  
+    if (ItemExists === undefined) {
+      const product = { name: name, id: id };
+      currentProduct.push(product);
+      saveProduct(currentProduct);
+    } else {
+      const newProduct = currentProduct.filter(item => item.id !== id);
+      saveProduct(newProduct);
+    }    
+  } 
 };
 
 export function allTopSeller(data) {

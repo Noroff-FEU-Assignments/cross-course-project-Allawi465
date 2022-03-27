@@ -25,6 +25,8 @@ export function newDeals(data) {
 export function allDeals(data) {
     const productContainer = document.querySelector(".games-item");
 
+    productContainer.innerHTML = "";
+
     for (let i = 9 ; i < data.length; i++) {
 
         const id = data[i].thumbnail
@@ -39,15 +41,15 @@ export function allDeals(data) {
                                                 <h3>${data[i].title}</h3>
                                                 <p>159,- nok</P>
                                                 <span class="about-link">
-                                                    <a href="href="details.html?id=${data[i].id}" class="pre-links">About</a>
+                                                    <a href="details.html?id=${data[i].id}" class="pre-links">About</a>
                                                 </span>
                                                 <span class="cart-link">
-                                                <button class="pre-links" data-id="${id}" data-title="${name}">Add to cart</button>
+                                                <button class="goCart" data-id="${id}" data-title="${name}">Add to cart</button>
                                                 </span>
                                             </div>`; 
     };
         
-    const adButton = document.querySelectorAll(".pre-links");
+    const adButton = document.querySelectorAll(".goCart");
 
     adButton.forEach((button) => {
         button.addEventListener("click", onClick);

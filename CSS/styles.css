@@ -2,6 +2,7 @@ body {
   margin: 0;
   display: flex;
   flex-direction: column;
+  font-family: 'Roboto', sans-serif;
 }
 
 header {
@@ -32,6 +33,11 @@ nav {
 
 .aktiv {
   display: flex;
+}
+
+#aktiv {
+  font-weight: bolder;
+  color: #4B7490;
 }
 
 nav ul {
@@ -65,10 +71,6 @@ i {
   color: #ffffff;
   font-size: 1em;
   width: 20px;
-}
-
-.fa-home {
-  color: #4B7490;
 }
 
 .hamburger div{
@@ -109,6 +111,11 @@ h1 {
   flex: 0 0 100%;
   text-align: center;
   font-size: 1.5rem;
+}
+
+.contact-h2 {
+  font-size: 18px;
+  text-transform: lowercase;
 }
 
 .link_titel {
@@ -161,7 +168,7 @@ h3, p {
   object-fit: cover;
 }
 
-.pre-order-button {
+.pre-order-button, .buy-button {
   width: 110px;
   height: 60px;
   border: 0;
@@ -175,7 +182,7 @@ h3, p {
   transition-duration: 1s;
 }
 
-.pre-order-button:hover {
+.pre-order-button:hover,  .buy-button:hover {
   background-color: #4B7490;
 }
 
@@ -232,7 +239,7 @@ h3, p {
   margin-top: 10px;
 }
 
-.pre-links {
+.pre-links, .addToCart, .goCart {
   text-decoration: none;
   color: white;
   background-color: unset;
@@ -250,7 +257,6 @@ h3, p {
   transition-duration: 1s;
   border: none;
   margin-bottom: 5px;
-  margin: 5px 50px 5px;
 }
 
 .about-link:hover {
@@ -265,7 +271,6 @@ h3, p {
   transition-property: background-color;
   transition-duration: 1s;
   margin-bottom: 10px;
-  margin: 5px 50px 5px;
 }
 
 .cart-title, .price {
@@ -314,7 +319,6 @@ main h3 {
   object-fit: cover;
 }
   
-
 .trade-link{
   background: #4B7490;
   font-size: 1.3em;
@@ -322,7 +326,6 @@ main h3 {
   padding: 10px 35px;
   transition-property: background-color, text-decoration;
   transition-duration: 1s;
-  margin: 5px 50px 5px;
   white-space: nowrap;
 }
   
@@ -696,6 +699,7 @@ footer h3 {
   .signInnContainer {
     max-width: 30%;
     margin: auto;
+    margin-bottom: 50px;
   }
 
   .cart-container {
@@ -747,11 +751,6 @@ footer h3 {
     display: none;
   }
 
-  .about-link, .cart-link {
-    margin: unset;
-    margin-bottom: 5px;
-  }
-  
  /* footer @media */
 
  .footer-container {
@@ -759,5 +758,24 @@ footer h3 {
   flex-wrap: wrap;
   justify-content: space-evenly;
  }
- 
+}
+
+.loading {
+  border: 8px solid rgb(190, 184, 184);
+  border-top: 8px solid rgb(51, 139, 0);
+  border-radius: 50%;
+  width: 20px;
+  height: 20px;
+  animation: spin 1s linear infinite;
+  margin-top: 50px;
+  margin: auto;
+}
+
+@keyframes spin {
+  0% {
+      transform: rotate(0deg);
+  }
+  100% {
+      transform: rotate(360deg);
+  }
 }

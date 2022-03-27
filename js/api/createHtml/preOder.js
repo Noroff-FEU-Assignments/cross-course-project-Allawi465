@@ -7,6 +7,9 @@ export function commingSoon(data) {
 
     for (let i = 0 ; i < data.length; i++) {
 
+      const id = data[i].thumbnail
+      const name = data[i].title
+
         if (i === 3) {
             break;
         }
@@ -15,10 +18,36 @@ export function commingSoon(data) {
                                     <h3>${data[i].title}</h3>
                                     <p>Comming Soon</p>
                                     <span class="buttons-border">
-                                      <button class="pre-order-button">PRE ORDER</button>
+                                      <button class="pre-order-button" data-id="${id}" data-title="${name}">PRE ORDER</button>
                                     </span>
                                   </div>`; 
-    }
+  }
+
+  const adButton = document.querySelectorAll(".pre-order-button");
+
+    adButton.forEach((button) => {
+      button.addEventListener("click", onClick);
+    });
+        
+    function onClick() {
+    const name = this.dataset.title;
+    const id = this.dataset.id;
+
+    const currentProduct = getItemProduct();
+
+    const ItemExists = currentProduct.find(function(item) {
+      return item.name === name;
+    })
+  
+    if (ItemExists === undefined) {
+      const product = { name: name, id: id };
+      currentProduct.push(product);
+      saveProduct(currentProduct);
+    } else {
+      const newProduct = currentProduct.filter(item => item.id !== id);
+      saveProduct(newProduct);
+    }    
+  } 
 };
 
 export function allPreOder(data) {
