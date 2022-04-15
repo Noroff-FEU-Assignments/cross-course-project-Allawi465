@@ -106,6 +106,10 @@ main {
   min-height: 50vh;
 }
 
+.detailsMain {
+  height: 881.567px;
+}
+
 h1 {
   color: #304A5C;
   text-transform:capitalize;
