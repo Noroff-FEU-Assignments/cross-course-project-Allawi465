@@ -5,17 +5,18 @@ export function topSeller(data) {
 
     topSeller.innerHTML = "";
 
-    for (let i = 6 ; i < data.length; i++) {
+    for (let i = 2 ; i < data.length; i++) {
 
         const id = data[i].thumbnail
         const name = data[i].title
 
-        if (i === 9 ) {
+        if (i === 5) {
             break;
         }
+
         topSeller.innerHTML += `<div class="games-products">
-                                    <img class="item-images" src="${data[i].thumbnail}"/>
-                                    <h3>${data[i].title}</h3>
+                                    <img class="item-images" src="${data[i].images[0].thumbnail}"/>
+                                    <h3>${data[i].name}</h3>
                                     <p>Our top sellers game</p>
                                     <span class="buttons-border">
                                         <button class="buy-button" data-id="${id}" data-title="${name}">Buy Now</button>
@@ -55,18 +56,18 @@ export function allTopSeller(data) {
 
     games.innerHTML = "";
 
-    for (let i = 6 ; i < data.length; i++) {
+    for (let i = 3 ; i < data.length; i++) {
 
         const id = data[i].thumbnail
         const name = data[i].title
 
-        if (i === 9 ) {
+        if (i === 6 ) {
             break;
         }
 
         games.innerHTML += `<div class="games-products">
-                                <img class="item-images" src="${data[i].thumbnail}" alt="cover-image for the game"/>
-                                <h3>${data[i].title}</h3>
+                                <img class="item-images" src="${data[i].images[0].thumbnail}" alt="cover-image for the game"/>
+                                <h3>${data[i].name}</h3>
                                 <p>159,- nok</P>
                                 <span class="about-link">
                                     <a href="details.html?id=${data[i].id}" class="aboutLink">About</a>

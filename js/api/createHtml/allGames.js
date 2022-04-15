@@ -6,14 +6,15 @@ export function allGames(data) {
 
     allGames.innerHTML = "";
 
-    for (let i = 12 ; i < data.length; i++) {
+    for (let i = 5 ; i < data.length; i++) {
 
-        if (i === 15 ) {
+        if (i === 8 ) {
             break;
         }
+
         allGames.innerHTML += `<div class="games-products">
-                                    <img class="item-images" src="${data[i].thumbnail}" alt="cover-image for the game"/>
-                                    <h3>${data[i].title}</h3>
+                                    <img class="item-images" src="${data[i].images[0].thumbnail}" alt="cover-image for the game"/>
+                                    <h3>${data[i].name}</h3>
                                     <p>Let the gaming begin.</p>
                                     <span class="view-links">
                                         <a href="details.html?id=${data[i].id}" class="view-all">View Game</a>
@@ -30,16 +31,12 @@ export function ViewAllGames(data) {
 
     for (let i = 0 ; i < data.length; i++) {
 
-       const id = data[i].thumbnail
+        const id = data[i].thumbnail
         const name = data[i].title
-
-        if (i === 12 ) {
-            break;
-        }
         
         games.innerHTML += `<div class="games-products">
-                                <img class="item-images" src="${data[i].thumbnail}" alt="cover-image for the game"/>
-                                <h3>${data[i].title}</h3>
+                                <img class="item-images" src="${data[i].images[0].thumbnail}" alt="cover-image for the game"/>
+                                <h3>${data[i].name}</h3>
                                 <p>159,- nok</P>
                                 <span class="about-link">
                                     <a href="details.html?id=${data[i].id}" class="aboutLink">About</a>

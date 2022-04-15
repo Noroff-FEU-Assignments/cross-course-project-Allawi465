@@ -107,8 +107,9 @@ main {
 }
 
 .detailsMain {
-  height: 881.567px;
-}
+  min-height: 1124.57px;
+  margin: unset;
+} 
 
 h1 {
   color: #304A5C;
@@ -692,7 +693,7 @@ footer h3 {
     margin: auto;
   }
 
-  .cartMain, .signInn, .signInn, .detailsMain {
+  .cartMain, .signInn, .signInn {
     margin: unset;
     min-height: unset;
   } 
@@ -737,7 +738,7 @@ footer h3 {
   }
 
  .games-products img {
-    height: 200px;
+    height: 297px;
   }
 
  .cartImages {

@@ -2,11 +2,7 @@ import { ViewAllGames } from "../createHtml/allGames.js"
 
 const messageCotainer = document.querySelector(".error-message");
 
-const url = fetch("https://free-to-play-games-database.p.rapidapi.com/api/games", {
-    "headers": {
-       "x-rapidapi-key": "d252199cafmshb9ddfac0121f925p1d5962jsn8b7da9697655"
-    }
-});
+const url = fetch("http://localhost/gamehub/wp-json/wc/store/products");
 
 async function getGames() {
 

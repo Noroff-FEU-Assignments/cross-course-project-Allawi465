@@ -5,15 +5,15 @@ export function newDeals(data) {
 
     newDeals.innerHTML = "";
 
-    for (let i = 9 ; i < data.length; i++) {
+    for (let i = 0 ; i < data.length; i++) {
 
-        if (i === 12 ) {
+        if (i === 3 ) {
             break;
         }
 
         newDeals.innerHTML += `<div class="games-products">
-                                    <img class="item-images" src="${data[i].thumbnail}" alt="cover-image for the game"/>
-                                    <h3>${data[i].title}</h3>
+                                    <img class="item-images" src="${data[i].images[0].thumbnail}" alt="cover-image for the game"/>
+                                    <h3>${data[i].name}</h3>
                                     <p>check our new deal.</p>
                                     <span class="view-links">
                                         <a href="details.html?id=${data[i].id}" class="view-all">View Game</a>
@@ -27,18 +27,18 @@ export function allDeals(data) {
 
     productContainer.innerHTML = "";
 
-    for (let i = 9 ; i < data.length; i++) {
+    for (let i = 0; i < data.length; i++) {
 
         const id = data[i].thumbnail
         const name = data[i].title
 
-        if (i === 12 ) {
+        if (i === 3 ) {
             break;
         }
 
            productContainer.innerHTML += `<div class="games-products">
-                                                <img class="item-images" src="${data[i].thumbnail}" alt="cover-image for the game"/>
-                                                <h3>${data[i].title}</h3>
+                                                <img class="item-images" src="${data[i].images[0].thumbnail}" alt="cover-image for the game"/>
+                                                <h3>${data[i].name}</h3>
                                                 <p>159,- nok</P>
                                                 <span class="about-link">
                                                     <a href="details.html?id=${data[i].id}" class="aboutLink">About</a>
