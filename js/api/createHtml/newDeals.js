@@ -12,7 +12,7 @@ export function newDeals(data) {
         }
 
         newDeals.innerHTML += `<div class="games-products">
-                                    <img class="item-images" src="${data[i].images[0].thumbnail}" alt="cover-image for the game"/>
+                                    <img class="item-images" src="${data[i].images[0].src}" alt="cover-image for the game"/>
                                     <h3>${data[i].name}</h3>
                                     <p>check our new deal.</p>
                                     <span class="view-links">
@@ -29,15 +29,15 @@ export function allDeals(data) {
 
     for (let i = 0; i < data.length; i++) {
 
-        const id = data[i].thumbnail
-        const name = data[i].title
+        const id = data[i].images[0].src
+        const name = data[i].name
 
         if (i === 3 ) {
             break;
         }
 
            productContainer.innerHTML += `<div class="games-products">
-                                                <img class="item-images" src="${data[i].images[0].thumbnail}" alt="cover-image for the game"/>
+                                                <img class="item-images" src="${data[i].images[0].src}" alt="cover-image for the game"/>
                                                 <h3>${data[i].name}</h3>
                                                 <p>159,- nok</P>
                                                 <span class="about-link">

@@ -7,15 +7,15 @@ export function topSeller(data) {
 
     for (let i = 2 ; i < data.length; i++) {
 
-        const id = data[i].thumbnail
-        const name = data[i].title
+        const id = data[i].images[0].src
+        const name = data[i].name
 
         if (i === 5) {
             break;
         }
 
         topSeller.innerHTML += `<div class="games-products">
-                                    <img class="item-images" src="${data[i].images[0].thumbnail}"/>
+                                    <img class="item-images" src="${data[i].images[0].src}"/>
                                     <h3>${data[i].name}</h3>
                                     <p>Our top sellers game</p>
                                     <span class="buttons-border">
@@ -58,15 +58,15 @@ export function allTopSeller(data) {
 
     for (let i = 3 ; i < data.length; i++) {
 
-        const id = data[i].thumbnail
-        const name = data[i].title
+        const id = data[i].images[0].src
+        const name = data[i].name
 
         if (i === 6 ) {
             break;
         }
 
         games.innerHTML += `<div class="games-products">
-                                <img class="item-images" src="${data[i].images[0].thumbnail}" alt="cover-image for the game"/>
+                                <img class="item-images" src="${data[i].images[0].src}"alt="cover-image for the game"/>
                                 <h3>${data[i].name}</h3>
                                 <p>159,- nok</P>
                                 <span class="about-link">

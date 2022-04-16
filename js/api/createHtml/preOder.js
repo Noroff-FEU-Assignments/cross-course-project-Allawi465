@@ -7,12 +7,12 @@ export function commingSoon(data) {
 
     for (let i = 6 ; i < data.length; i++) {
 
-      const id = data[i].thumbnail
-      const name = data[i].title
+      const id = data[i].images[0].src
+      const name = data[i].name
 
 
         commingSoon.innerHTML += `<div class="games-products">
-                                    <img class="item-images" src="${data[i].images[0].thumbnail}" alt="cover-image for the game"/>
+                                    <img class="item-images" src="${data[i].images[0].src}" alt="cover-image for the game"/>
                                     <h3>${data[i].name}</h3>
                                     <p>Comming Soon</p>
                                     <span class="buttons-border">
@@ -56,12 +56,12 @@ export function allPreOder(data) {
 
     for (let i = 6; i < data.length; i++) {
 
-      const id = data[i].thumbnail
-      const name = data[i].title
+      const id = data[i].images[0].src
+      const name = data[i].name
 
 
       productContainer.innerHTML += `<div class="games-products">
-                                          <img class="item-images" src="${data[i].images[0].thumbnail}" alt="cover-image for the game"/>
+                                          <img class="item-images" src="${data[i].images[0].src}" alt="cover-image for the game"/>
                                           <h3>${data[i].name}</h3>
                                           <p>159,- nok</P>
                                           <span class="about-link">

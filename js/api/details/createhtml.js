@@ -3,12 +3,13 @@ import { getItemProduct, saveProduct } from "../../localStorage/localStorage.js"
 export function createHTMLDetails(data) {
     const productContainer = document.querySelector(".games-details");
     const image = data.images[0].thumbnail
+    const name = data.name
 
     productContainer.innerHTML = `<div class="games-products">
                                     <img class="item-images" src="${data.images[0].thumbnail}" alt="cover-image for the game"/>
                                     <h2>${data.name}</h2>
                                     <span class="cart-link">
-                                       <button class="addToCart" data-id="${image}" data-title="${data.title}">Add to cart</button>
+                                       <button class="addToCart" data-id="${image}" data-title="${name}">Add to cart</button>
                                     </span>
                                     <span class="trade-link">
                                        <a href="trade.html" class="aboutLink">Trade in</a>
