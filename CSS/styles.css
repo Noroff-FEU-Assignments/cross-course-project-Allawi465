@@ -493,12 +493,12 @@ label {
   color: red;
 }
 
-input {
+.name, .subject, .email, .address  {
   width: 97%;
   margin-top: 7px;
   padding: 12px;
   font-size: 16px;
-}
+} 
 
 .submit {
   margin-top: 20px;
@@ -563,6 +563,39 @@ input {
   color: #00000096;
   font-size: 1.5rem;
   padding: 10px;
+}
+
+#search {
+  padding: 10px;
+  font-size: 17px;
+  border: 1px solid #4B7490;
+  width: 75%;
+  background: #f1f1f1;
+}
+
+.search-container {
+  display: flex;
+}
+
+.searchButton {
+  width: 20%;
+  padding: 10px;
+  background: #4B7490;
+  color: white;
+  font-size: 17px;
+  border: 1px solid grey;
+  border-left: none;
+  cursor: pointer;
+}
+
+.categories {
+ display: flex;
+ flex-wrap: wrap;
+ font-size: 1rem;
+ font-weight: bold;
+ line-height: 1.1;
+ margin-bottom: 50px;
+ margin-left: 100px;
 }
 
 /* footer */

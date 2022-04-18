@@ -1,7 +1,7 @@
-const fullName = document.querySelector("#name");
-const subject = document.querySelector("#subject");
-const eMail = document.querySelector("#email");
-const address = document.querySelector("#address");
+const fullName = document.querySelector(".name");
+const subject = document.querySelector(".subject");
+const eMail = document.querySelector(".email");
+const address = document.querySelector(".address");
 const form = document.querySelector("form");
 const message = document.querySelector("#formMessage");
 
