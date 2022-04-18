@@ -569,12 +569,19 @@ label {
   padding: 10px;
   font-size: 17px;
   border: 1px solid #4B7490;
-  width: 75%;
+  width: 100%;
   background: #f1f1f1;
+}
+
+.search-center {
+  margin: auto;
+  text-align: center;
+  width: 50%;
 }
 
 .search-container {
   display: flex;
+  text-align: center;
 }
 
 .searchButton {
@@ -595,7 +602,13 @@ label {
  font-weight: bold;
  line-height: 1.1;
  margin-bottom: 50px;
- margin-left: 100px;
+ margin-left: 200px;
+ margin-top: 10px;
+}
+
+.category {
+  margin-top: 20px;
+  margin-right: 10px;
 }
 
 /* footer */

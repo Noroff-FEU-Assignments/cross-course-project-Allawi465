@@ -1,16 +1,18 @@
 import { ViewAllGames } from "../createHtml/allGames.js"
 
 const messageCotainer = document.querySelector(".error-message");
+const games = document.querySelector(".games-item");
+const categories = document.querySelectorAll(".categories")
+const searchButton = document.querySelector(".searchButton")
 
-const url = fetch("https://wildflowerpower.site/gamehub/wp-json/wc/v3/products?consumer_key=ck_810589bc9a817ddde7853b9c96dfd53a45a6c994&consumer_secret=cs_519f71cee5ce259b99046607c1a640e516271066");
+const wpUrl = "https://wildflowerpower.site/gamehub/wp-json/wc/store/products";
 
-async function getGames() {
-
+async function getGames(url) {
     try {
-        const response = await url;
+        const response = await fetch(url);
         
         const data = await response.json();
-
+        
         ViewAllGames(data)
         
     } catch(error) {
@@ -18,4 +20,26 @@ async function getGames() {
     }
 };
 
-getGames()
+getGames(wpUrl)
+
+categories.forEach(function(category){
+    category.onclick = function(event){
+       let newurl;
+        if (event.target.id === "featured") {
+            newurl = wpUrl + "?featured=true"
+        } 
+        else {
+            const categoryOption = event.target.value;
+            newurl = wpUrl + `?category=${categoryOption}`
+        }
+        games.innerHTML = "";
+        getGames(newurl)
+    }
+});
+
+searchButton.onclick = function() {
+    const searchInput = document.querySelector("#search").value;
+    const newurl = wpUrl + `?search=${searchInput}`;
+    games.innerHTML = "";
+    getGames(newurl);
+};

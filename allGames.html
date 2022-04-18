@@ -6,10 +6,7 @@
       name="desciption" content="GameHub Ofical website"/>
     <meta name="viewport" content="widt=device-widt, initial-scale=1.0"/>
     <link rel="stylesheet" href="CSS/styles.css"/>
-    <script
-      src="https://kit.fontawesome.com/a2e814cf6f.js"
-      crossorigin="anonymous">
-    </script>
+    <script src="https://kit.fontawesome.com/a2e814cf6f.js" crossorigin="anonymous"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet"> 
@@ -29,10 +26,13 @@
               <a class="nav__link" href="index.html"><i class="fa fa-fw fa-home"></i> Home</a>
             </li>
             <li>
-              <a class="nav__link" href="trade.html"><i class="fas fa-sync"></i>Trade</a>
+              <a class="nav__link" href="allGames.html"><i class="fa-solid fa-shop"></i>  Shop</a>
             </li>
             <li>
-              <a class="nav__link" href="signIn.html"><i class="fa fa-fw fa-user"></i>Sign In</a>
+              <a class="nav__link" href="trade.html"><i class="fas fa-sync"></i> Trade</a>
+            </li>
+            <li>
+              <a class="nav__link" href="signIn.html"><i class="fa fa-fw fa-user"></i> Sign In</a>
             </li>
             <li>
               <a class="nav__link" href="cart.html"><i class="fas fa-shopping-cart"></i> Cart</a>
@@ -45,11 +45,13 @@
       <a href="index.html" class="home-pre-order">Home</a>
       <span class="homeLink">/ All Games</span>
       <h1>Products</h1>
-      <div class="search-container">
-        <input type="search" id="search">
-        <button type="submit" class="searchButton">
-          <i class="fa fa-search"></i>
-       </button>
+      <div class="search-center">
+        <div class="search-container">
+          <input type="search" id="search">
+          <button type="submit" class="searchButton">
+            <i class="fa fa-search"></i>
+         </button>
+        </div>
       </div>
       <div class="categories">
         <label for="featured">Featured</label>
@@ -63,7 +65,6 @@
         <label for="all games">All Games</label>
         <input type="radio" name="category" id="all-games" class="category" value="19">
       </div>
-
        <div class="games-item">
         <div class="error-message"></div>
         <div class="loading"></div>
