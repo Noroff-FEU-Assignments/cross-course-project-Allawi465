@@ -8,7 +8,7 @@ const params = new URLSearchParams(queryString);
 
 const id = params.get("id");
 
-const url = fetch("http://localhost/gamehub/wp-json/wc/store/products/" + id);
+const url = fetch(`https://wildflowerpower.site/gamehub/wp-json/wc/v3/products/${id}?consumer_key=ck_810589bc9a817ddde7853b9c96dfd53a45a6c994&consumer_secret=cs_519f71cee5ce259b99046607c1a640e516271066`);
 
 async function getGamesInfo() {
     try {
