@@ -71,6 +71,5 @@ export function ViewAllGames(data) {
             const newProduct = currentProduct.filter(item => item.id !== id);
             saveProduct(newProduct);
         }
-
     } 
 };

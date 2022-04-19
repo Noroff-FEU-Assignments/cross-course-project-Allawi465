@@ -1,17 +1,17 @@
 import { getItemProduct, saveProduct } from "../../localStorage/localStorage.js"
 
 export function commingSoon(data) {
-    const commingSoon = document.querySelector(".games-item");
+  const commingSoon = document.querySelector(".games-item");
 
-    commingSoon.innerHTML = "";
+  commingSoon.innerHTML = "";
 
     for (let i = 6 ; i < data.length; i++) {
 
-      const id = data[i].images[0].src
-      const name = data[i].name
+    const id = data[i].images[0].src
+    const name = data[i].name
 
 
-        commingSoon.innerHTML += `<div class="games-products">
+    commingSoon.innerHTML += `<div class="games-products">
                                     <img class="item-images" src="${data[i].images[0].src}" alt="cover-image for the game"/>
                                     <h3>${data[i].name}</h3>
                                     <p>Comming Soon</p>
@@ -50,17 +50,17 @@ export function commingSoon(data) {
 
 export function allPreOder(data) {
 
-    const productContainer = document.querySelector(".games-item");
+  const productContainer = document.querySelector(".games-item");
 
-    productContainer.innerHTML = "";
+  productContainer.innerHTML = "";
 
-    for (let i = 6; i < data.length; i++) {
+  for (let i = 6; i < data.length; i++) {
 
-      const id = data[i].images[0].src
-      const name = data[i].name
+    const id = data[i].images[0].src
+    const name = data[i].name
 
 
-      productContainer.innerHTML += `<div class="games-products">
+    productContainer.innerHTML += `<div class="games-products">
                                           <img class="item-images" src="${data[i].images[0].src}" alt="cover-image for the game"/>
                                           <h3>${data[i].name}</h3>
                                           <p>159,- nok</P>
@@ -71,32 +71,32 @@ export function allPreOder(data) {
                                             <button class="pre-links" data-id="${id}" data-title="${name}">Add to cart</button>
                                           </span>
                                         </div>`; 
-      };
+    };
 
-      const adButton = document.querySelectorAll(".pre-links");
+    const adButton = document.querySelectorAll(".pre-links");
 
-      adButton.forEach((button) => {
-          button.addEventListener("click", onClick);
-      });
+    adButton.forEach((button) => {
+      button.addEventListener("click", onClick);
+    });
           
-      function onClick() {
-        const name = this.dataset.title;
-        const id = this.dataset.id;
+    function onClick() {
+      const name = this.dataset.title;
+      const id = this.dataset.id;
 
-        const currentProduct = getItemProduct();
+      const currentProduct = getItemProduct();
 
-        const ItemExists = currentProduct.find(function(item) {
-            return item.name === name;
-        })
+      const ItemExists = currentProduct.find(function(item) {
+      return item.name === name;
+      })
     
-        if (ItemExists === undefined) {
-            const product = { name: name, id: id };
-            currentProduct.push(product);
-            saveProduct(currentProduct);
-        } else {
-            const newProduct = currentProduct.filter(item => item.id !== id);
-            saveProduct(newProduct);
-        }
-            
+      if (ItemExists === undefined) {
+        const product = { name: name, id: id };
+        currentProduct.push(product);
+        saveProduct(currentProduct);
+      } 
+      else {
+        const newProduct = currentProduct.filter(item => item.id !== id);
+        saveProduct(newProduct);
+      } 
     } 
 };  

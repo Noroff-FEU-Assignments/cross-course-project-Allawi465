@@ -15,7 +15,8 @@ async function getGames(url) {
         
         ViewAllGames(data)
         
-    } catch(error) {
+    } 
+    catch(error) {
         messageCotainer.innerHTML = `<p> An error occurred when showing the Games</p>`
     }
 };
