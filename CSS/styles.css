@@ -575,8 +575,7 @@ label {
 
 .search-center {
   margin: auto;
-  text-align: center;
-  width: 50%;
+  width: 80%;
 }
 
 .search-container {
@@ -600,9 +599,7 @@ label {
  flex-wrap: wrap;
  font-size: 1rem;
  font-weight: bold;
- line-height: 1.1;
  margin-bottom: 50px;
- margin-left: 200px;
  margin-top: 10px;
 }
 
@@ -808,8 +805,17 @@ footer h3 {
     display: none;
   }
 
- /* footer @media */
+  .search-center {
+    width: 50%;
+  }
 
+  .categories {
+    margin-left: 200px;
+    margin-top: 10px;
+   }
+
+ /* footer @media */
+ 
  .footer-container {
   display: flex;
   flex-wrap: wrap;
