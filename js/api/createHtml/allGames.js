@@ -37,7 +37,7 @@ export function ViewAllGames(data) {
         games.innerHTML += `<div class="games-products">
                                 <img class="item-images" src="${data[i].images[0].src}"alt="cover-image for the game"/>
                                 <h3>${data[i].name}</h3>
-                                <p>159,- nok</P>
+                                <p>${data[i].prices.price},- NOK</P>
                                 <span class="about-link">
                                     <a href="details.html?id=${data[i].id}" class="aboutLink">About</a>
                                 </span>

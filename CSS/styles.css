@@ -165,11 +165,10 @@ h3, p {
 .games-products {
   margin-bottom: 20px;
   text-align: center;
-  min-width: 270px;
 }
 
 .games-products img {
-  height: 200px;
+  height: 300px;
   max-width: 100%;
   object-fit: cover;
 }
@@ -315,7 +314,6 @@ main h3 {
 
 .item-images {
   height: 200px;
-  background-repeat: no-repeat;
   object-fit: cover;
 }
 
@@ -781,7 +779,7 @@ footer h3 {
   }
 
  .games-products img {
-    height: 297px;
+    height: 360px;
   }
 
  .cartImages {
@@ -810,7 +808,7 @@ footer h3 {
   }
 
   .categories {
-    margin-left: 180px;
+    margin-left: 230px;
     margin-top: 10px;
   }
 
