@@ -12,6 +12,13 @@ async function getGames() {
         const data = await response.json();
 
         allPreOder(data)
+
+        const item = data;
+
+        data.push({
+            ...data, 
+            changeNumberUnits: 1,
+        });
         
     } catch(error) {
         messageCotainer.innerHTML = `<p> An error occurred when showing the Games</p>`

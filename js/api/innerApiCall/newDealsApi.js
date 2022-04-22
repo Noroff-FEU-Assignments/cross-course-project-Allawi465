@@ -11,6 +11,13 @@ async function getGames() {
         
         const data = await response.json();
 
+        const item = data;
+
+        data.push({
+            ...data, 
+            changeNumberUnits: 1,
+        });
+
         allDeals(data)
         
     } catch(error) {

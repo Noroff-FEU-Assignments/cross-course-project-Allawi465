@@ -507,6 +507,45 @@ label {
 
 /* cart  */
 
+.cart-item div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.cart-item .unit-price {
+  font-size: 1.2rem;
+}
+
+.cart-item .units .btn {
+  width: 20px;
+  height: 20px;
+  color: white;
+  background-color: #38566B;
+  border-radius: 50%;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.cart-footer div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 15px 0;
+  font-size: 1.3rem;
+}
+
+.cart-footer .checkout {
+  background-color: #38566B;
+  cursor: pointer;
+  color: white;
+}
+
+.cart-item .units .number {
+  margin: 0 10px;
+  font-size: 1.2rem;
+}
+
 .fa-shopping-bag {
   color: #38566B;
   font-size: 30px;

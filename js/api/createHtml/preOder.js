@@ -29,6 +29,8 @@ export function allPreOder(data) {
     const image = data[i].images[0].src;
     const name = data[i].name;
     const price = data[i].price;
+    const id = data[i].id;
+    const unit = data[i].add_to_cart.minimum;
 
     productContainer.innerHTML += `<div class="games-products">
                                           <img class="item-images" src="${data[i].images[0].src}" alt="cover-image for the game"/>
@@ -38,7 +40,7 @@ export function allPreOder(data) {
                                             <a href="details.html?id=${data[i].id}" class="aboutLink">About</a>
                                           </span>
                                           <span class="cart-link">
-                                            <button class="pre-links" data-img="${image}" data-title="${name}"  data-price="${price}">Add to cart</button>
+                                            <button class="pre-links" data-img="${image}" data-title="${name}"  data-price="${price}" data-id="${id}" data-unit="${unit}">Add to cart</button>
                                           </span>
                                         </div>`; 
     };
@@ -53,20 +55,22 @@ export function allPreOder(data) {
       const name = this.dataset.title;
       const image = this.dataset.img;
       const price = this.dataset.price;
+      const id = this.dataset.id;
+      const unit = this.dataset.unit;
 
       const currentProduct = getItemProduct();
 
       const ItemExists = currentProduct.find(function(item) {
           return item.name === name;
       })
-    
+  
       if (ItemExists === undefined) {
-          const product = { name: name, img: image, price: price};
+          const product = { name: name, img: image, price: price, id: id, unit: unit};
           currentProduct.push(product);
           saveProduct(currentProduct);
       } else {
-        const newProduct = currentProduct.filter(item => item.id !== id);
-        saveProduct(newProduct);
-      }     
-    } 
+          const newProduct = currentProduct.filter(item => item.id !== id);
+          saveProduct(newProduct);
+      }
+  } 
 };  
