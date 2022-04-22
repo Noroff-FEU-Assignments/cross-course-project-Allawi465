@@ -29,9 +29,10 @@ export function allTopSeller(data) {
 
     for (let i = 3 ; i < data.length; i++) {
 
-        const id = data[i].images[0].src
-        const name = data[i].name
-
+        const image = data[i].images[0].src;
+        const name = data[i].name;
+        const price = data[i].price;
+        
         if (i === 6 ) {
             break;
         }
@@ -44,7 +45,7 @@ export function allTopSeller(data) {
                                     <a href="details.html?id=${data[i].id}" class="aboutLink">About</a>
                                 </span>
                                 <span class="cart-link">
-                                    <button class="pre-links" data-id="${id}" data-title="${name}">Add to cart</button>
+                                    <button class="pre-links" data-img="${image}" data-title="${name}"  data-price="${price}">Add to cart</button>
                                 </span>
                             </div>`;
     };
@@ -56,22 +57,23 @@ export function allTopSeller(data) {
     });
         
     function onClick() {
-        const name = this.dataset.title;
-        const id = this.dataset.id;
+      const name = this.dataset.title;
+      const image = this.dataset.img;
+      const price = this.dataset.price;
 
-        const currentProduct = getItemProduct();
+      const currentProduct = getItemProduct();
 
-        const ItemExists = currentProduct.find(function(item) {
-            return item.name === name;
-        })
+      const ItemExists = currentProduct.find(function(item) {
+          return item.name === name;
+      })
     
-        if (ItemExists === undefined) {
-            const product = { name: name, id: id };
-            currentProduct.push(product);
-            saveProduct(currentProduct);
-        } else {
-            const newProduct = currentProduct.filter(item => item.id !== id);
-            saveProduct(newProduct);
-        }
+      if (ItemExists === undefined) {
+          const product = { name: name, img: image, price: price};
+          currentProduct.push(product);
+          saveProduct(currentProduct);
+      } else {
+        const newProduct = currentProduct.filter(item => item.id !== id);
+        saveProduct(newProduct);
+      }     
     } 
 };

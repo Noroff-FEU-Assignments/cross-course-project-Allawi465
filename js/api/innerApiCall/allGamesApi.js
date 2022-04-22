@@ -13,7 +13,7 @@ async function getGames(url) {
         
         const data = await response.json();
         
-        ViewAllGames(data)
+        ViewAllGames(data) 
         
     } 
     catch(error) {

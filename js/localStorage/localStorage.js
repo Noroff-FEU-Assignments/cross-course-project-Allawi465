@@ -10,4 +10,4 @@ export function getItemProduct() {
 
 export function saveProduct(item) {
     localStorage.setItem("adToCart", JSON.stringify(item))
-}
+} 

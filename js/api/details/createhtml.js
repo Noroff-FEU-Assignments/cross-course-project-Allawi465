@@ -1,14 +1,18 @@
 import { getItemProduct, saveProduct } from "../../localStorage/localStorage.js"
 
 export function createHTMLDetails(data) {
-    const productContainer = document.querySelector(".games-details");
-    const name = data.name
 
-    productContainer.innerHTML = `<div class="games-products">
+   const productContainer = document.querySelector(".games-details");
+
+   const image = data.images[0].src
+   const name = data.name
+   const price = data.price
+
+   productContainer.innerHTML = `<div class="games-products">
                                     <img class="item-images" src="${data.images[0].src}"alt="cover-image for the game"/>
                                     <h2>${data.name}</h2>
                                     <span class="cart-link">
-                                       <button class="addToCart" data-id="${data.images[0].src}" data-title="${name}">Add to cart</button>
+                                       <button class="pre-links" data-img="${image}" data-title="${name}" data-price="${price}">Add to cart</button>
                                     </span>
                                     <span class="trade-link">
                                        <a href="trade.html" class="aboutLink">Trade in</a>
@@ -31,31 +35,30 @@ export function createHTMLDetails(data) {
                                     </div>
                                  </div>`;
 
-        const adButton = document.querySelectorAll(".addToCart");
+   const adButton = document.querySelectorAll(".pre-links");
 
-        adButton.forEach((button) => {
-            button.addEventListener("click", onClick);
-        });
-
-        
-        function onClick() {
-        const name = this.dataset.title;
-        const id = this.dataset.id;
-    
-        const currentProduct = getItemProduct();
-    
-        const ItemExists = currentProduct.find(function(item) {
-                return item.name === name;
-        })
-        
-        if (ItemExists === undefined) {
-            const product = { name: name, id: id };
-            currentProduct.push(product);
-            saveProduct(currentProduct);
-        } else {
-            const newProduct = currentProduct.filter(item => item.id !== id);
-            saveProduct(newProduct);
-        }
-    }
-
-};
+   adButton.forEach((button) => {
+      button.addEventListener("click", onClick);
+   });
+                                     
+   function onClick() {
+      const name = this.dataset.title;
+      const image = this.dataset.img;
+      const price = this.dataset.price;
+                             
+      const currentProduct = getItemProduct();
+                             
+      const ItemExists = currentProduct.find(function(item) {
+         return item.name === name;
+      })
+                                 
+      if (ItemExists === undefined) {
+         const product = { name: name, img: image, price: price};
+         currentProduct.push(product);
+         saveProduct(currentProduct);
+      } else {
+         const newProduct = currentProduct.filter(item => item.id !== id);
+         saveProduct(newProduct);
+      }     
+    }    
+    };

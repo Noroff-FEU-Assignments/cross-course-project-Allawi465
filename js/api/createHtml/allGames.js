@@ -31,8 +31,9 @@ export function ViewAllGames(data) {
 
     for (let i = 0 ; i < data.length; i++) {
 
-        const id = data[i].images[0].src
+        const image = data[i].images[0].src
         const name = data[i].name
+        const price = data[i].prices.price
         
         games.innerHTML += `<div class="games-products">
                                 <img class="item-images" src="${data[i].images[0].src}"alt="cover-image for the game"/>
@@ -42,7 +43,7 @@ export function ViewAllGames(data) {
                                     <a href="details.html?id=${data[i].id}" class="aboutLink">About</a>
                                 </span>
                                 <span class="cart-link">
-                                    <button class="pre-links" data-id="${id}" data-title="${name}">Add to cart</button>
+                                    <button class="pre-links" data-img="${image}" data-title="${name}" data-price="${price}">Add to cart</button>
                                 </span>
                             </div>`; 
     }
@@ -55,7 +56,8 @@ export function ViewAllGames(data) {
         
     function onClick() {
         const name = this.dataset.title;
-        const id = this.dataset.id;
+        const image = this.dataset.img;
+        const price = this.dataset.price;
 
         const currentProduct = getItemProduct();
 
@@ -64,7 +66,7 @@ export function ViewAllGames(data) {
         })
     
         if (ItemExists === undefined) {
-            const product = { name: name, id: id };
+            const product = { name: name, img: image, price: price};
             currentProduct.push(product);
             saveProduct(currentProduct);
         } else {
