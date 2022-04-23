@@ -6,13 +6,15 @@ export function createHTMLDetails(data) {
 
    const image = data.images[0].src
    const name = data.name
-   const price = data.price
+   const price = data.prices.price
+   const id = data.id;
+   const unit = data.add_to_cart.minimum;
 
    productContainer.innerHTML = `<div class="games-products">
-                                    <img class="item-images" src="${data.images[0].src}"alt="cover-image for the game"/>
+                                    <img class="item-images" src="${image}"alt="cover-image for the game"/>
                                     <h2>${data.name}</h2>
                                     <span class="cart-link">
-                                       <button class="pre-links" data-img="${image}" data-title="${name}" data-price="${price}">Add to cart</button>
+                                       <button class="pre-links" data-img="${image}" data-title="${name}" data-price="${price}" data-id="${id}" data-unit="${unit}">Add to cart</button>
                                     </span>
                                     <span class="trade-link">
                                        <a href="trade.html" class="aboutLink">Trade in</a>
@@ -45,20 +47,22 @@ export function createHTMLDetails(data) {
       const name = this.dataset.title;
       const image = this.dataset.img;
       const price = this.dataset.price;
-                             
+      const id = this.dataset.id;
+      const unit = this.dataset.unit;
+
       const currentProduct = getItemProduct();
-                             
+
       const ItemExists = currentProduct.find(function(item) {
-         return item.name === name;
+          if (item.id === id) {
+              item.unit ++;
+              return item.id === id;
+          }
       })
-                                 
+      
       if (ItemExists === undefined) {
-         const product = { name: name, img: image, price: price};
-         currentProduct.push(product);
-         saveProduct(currentProduct);
-      } else {
-         const newProduct = currentProduct.filter(item => item.id !== id);
-         saveProduct(newProduct);
-      }     
-    }    
-    };
+          const product = { name: name, img: image, price: price, id: id, unit: unit};
+          currentProduct.push(product);
+          saveProduct(currentProduct);
+      }
+  }  
+};

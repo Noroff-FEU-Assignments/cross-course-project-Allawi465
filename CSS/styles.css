@@ -549,6 +549,9 @@ label {
 .fa-shopping-bag {
   color: #38566B;
   font-size: 30px;
+  position: relative;
+  z-index: -10;
+  top: 4px;
 }
 
 .shopping-bag, .total-items-in-cart {
@@ -586,7 +589,7 @@ label {
 
 .search-center {
   margin: auto;
-  width: 90%;
+  width: 100%;
 }
 
 .search-container {
@@ -608,6 +611,7 @@ label {
 .categories {
  display: flex;
  flex-wrap: wrap;
+ justify-content: center;
  font-size: 1rem;
  font-weight: bold;
  margin-bottom: 50px;
@@ -814,11 +818,6 @@ footer h3 {
 
   .search-center {
     width: 50%;
-  }
-
-  .categories {
-    margin-left: 230px;
-    margin-top: 10px;
   }
 
  /* footer @media */

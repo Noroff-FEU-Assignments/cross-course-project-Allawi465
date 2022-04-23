@@ -13,9 +13,9 @@ item.forEach(item => {
                                         <small>${item.price},- NOK</small>
                                     </div>
                                     <div class="units">
-                                        <div class="btn" onClick="('minus', ${item.id})">-</div>
-                                        <div class="number">1</div>
-                                        <div class="btn" onClick="('plus', ${item.id})">+</div>           
+                                        <div class="btn minus">-</div>
+                                        <div class="number">${item.unit}</div>
+                                        <div class="btn plus">+</div>           
                                     </div>
                                 </div>`;
 });

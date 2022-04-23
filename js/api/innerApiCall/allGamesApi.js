@@ -4,6 +4,9 @@ const messageCotainer = document.querySelector(".error-message");
 const games = document.querySelector(".games-item");
 const categories = document.querySelectorAll(".categories")
 const searchButton = document.querySelector(".searchButton")
+const sorter = document.querySelector("select");
+
+
 
 const wpUrl = "https://wildflowerpower.site/gamehub/wp-json/wc/store/products";
 
@@ -43,3 +46,8 @@ searchButton.onclick = function() {
     games.innerHTML = "";
     getGames(newurl);
 };
+
+
+
+
+
