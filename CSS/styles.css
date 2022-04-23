@@ -549,8 +549,6 @@ label {
 .fa-shopping-bag {
   color: #38566B;
   font-size: 30px;
-  position: relative;
-  top: 3px;
 }
 
 .shopping-bag, .total-items-in-cart {

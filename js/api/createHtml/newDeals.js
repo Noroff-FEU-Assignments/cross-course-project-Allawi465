@@ -31,7 +31,7 @@ export function allDeals(data) {
 
         const image = data[i].images[0].src;
         const name = data[i].name;
-        const price = data[i].price;
+        const price = data[i].prices.price;
         const id = data[i].id;
         const unit = data[i].add_to_cart.minimum;
         
@@ -43,7 +43,7 @@ export function allDeals(data) {
            productContainer.innerHTML += `<div class="games-products">
                                                 <img class="item-images" src="${data[i].images[0].src}" alt="cover-image for the game"/>
                                                 <h3>${data[i].name}</h3>
-                                                <p>${data[i].price},- NOK</P>
+                                                <p>${price},- NOK</P>
                                                 <span class="about-link">
                                                     <a href="details.html?id=${data[i].id}" class="aboutLink">About</a>
                                                 </span>

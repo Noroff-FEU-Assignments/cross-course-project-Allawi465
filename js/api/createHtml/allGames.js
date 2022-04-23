@@ -40,7 +40,7 @@ export function ViewAllGames(data) {
         games.innerHTML += `<div class="games-products">
                                 <img class="item-images" src="${data[i].images[0].src}"alt="cover-image for the game"/>
                                 <h3>${data[i].name}</h3>
-                                <p>${data[i].prices.price},- NOK</P>
+                                <p>${price},- NOK</P>
                                 <span class="about-link">
                                     <a href="details.html?id=${data[i].id}" class="aboutLink">About</a>
                                 </span>
@@ -66,16 +66,16 @@ export function ViewAllGames(data) {
         const currentProduct = getItemProduct();
 
         const ItemExists = currentProduct.find(function(item) {
-            return item.name === name;
+            if (item.id === id) {
+                item.unit ++;
+                return item.id === id;
+            }
         })
-    
+        
         if (ItemExists === undefined) {
             const product = { name: name, img: image, price: price, id: id, unit: unit};
             currentProduct.push(product);
             saveProduct(currentProduct);
-        } else {
-            const newProduct = currentProduct.filter(item => item.id !== id);
-            saveProduct(newProduct);
         }
     } 
 };

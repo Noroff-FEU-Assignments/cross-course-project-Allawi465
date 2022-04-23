@@ -13,36 +13,9 @@ item.forEach(item => {
                                         <small>${item.price},- NOK</small>
                                     </div>
                                     <div class="units">
-                                        <div class="btn" handleClick="('minus', ${item.id})">-</div>
+                                        <div class="btn" onClick="('minus', ${item.id})">-</div>
                                         <div class="number">1</div>
-                                        <div class="btn" handleClick="('plus', ${item.id})">+</div>           
+                                        <div class="btn" onClick="('plus', ${item.id})">+</div>           
                                     </div>
                                 </div>`;
 });
-
-const unitButton = document.querySelectorAll(".btn");
-
-unitButton.forEach((button) => {
-    button.addEventListener("click", handleClick);
-});
-
-function handleClick(action, id) {
-   console.log("hei")
-} 
-
-
-/* function unit(action, id) {
-    getItemProduct = getItemProduct.map((item) => {
-        let unit = item.unit; 
-    
-        if (item.id === id) {
-            if (action === "minus")
-            units--;
-        } else if (action === "plus") {
-            units++;
-        }
-        return {
-            ...item,
-        };
-    });
-};  */
