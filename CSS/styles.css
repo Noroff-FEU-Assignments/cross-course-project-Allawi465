@@ -613,14 +613,22 @@ label {
   cursor: pointer;
 }
 
+select {
+  margin-top: 10px;
+}
+
+.optionCargories {
+  display: flex;
+  justify-content: space-between;
+}
+
 .categories {
  display: flex;
  flex-wrap: wrap;
  justify-content: center;
  font-size: 1rem;
  font-weight: bold;
- margin-bottom: 50px;
- margin-top: 10px;
+ margin-bottom: 10px;
 }
 
 .category {

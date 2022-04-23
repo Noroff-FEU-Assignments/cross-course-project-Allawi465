@@ -4,7 +4,7 @@ const messageCotainer = document.querySelector(".error-message");
 const games = document.querySelector(".games-item");
 const categories = document.querySelectorAll(".categories")
 const searchButton = document.querySelector(".searchButton")
-const sorter = document.querySelector("select");
+const sorter = document.querySelector(".select select");
 
 
 
@@ -47,3 +47,14 @@ searchButton.onclick = function() {
     getGames(newurl);
 };
 
+const sortUrl = wpUrl + `?orderby=price`
+
+sorter.onchange = function (event) {
+    if (event.target.value === "high to low" ) {
+        games.innerHTML = "";
+        getGames(sortUrl)
+    } else if (event.target.value === "low to high") {
+        games.innerHTML = "";
+        getGames(wpUrl);
+    }
+};
