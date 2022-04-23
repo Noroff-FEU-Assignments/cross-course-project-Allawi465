@@ -168,6 +168,10 @@ h3, p {
   object-fit: cover;
 }
 
+.imglink {
+  text-decoration: none;
+}
+
 .top-site {
   color: #000000;
   display: block;
@@ -226,6 +230,7 @@ h3, p {
   background-color: unset;
   border: unset;
   font-size: 18px;
+  width: 100%;
 }
 
 .about-link{

@@ -43,18 +43,22 @@ export function createHTMLDetails(data) {
       button.addEventListener("click", onClick);
    });
                                      
-   function onClick() {
+   function onClick() { 
       const name = this.dataset.title;
       const image = this.dataset.img;
       const price = this.dataset.price;
       const id = this.dataset.id;
       const unit = this.dataset.unit;
 
+      if (this.innerHTML === "Add to cart") {
+          this.innerHTML = "Added to cart";
+      } else {
+          this.innerHTML = "Add to cart";
+      }
       const currentProduct = getItemProduct();
 
       const ItemExists = currentProduct.find(function(item) {
           if (item.id === id) {
-              item.unit ++;
               return item.id === id;
           }
       })
@@ -63,6 +67,9 @@ export function createHTMLDetails(data) {
           const product = { name: name, img: image, price: price, id: id, unit: unit};
           currentProduct.push(product);
           saveProduct(currentProduct);
-      }
-  }  
+      } else {
+          const newProduct = currentProduct.filter(item => item.id !== id);
+          saveProduct(newProduct);
+        } 
+   } 
 };

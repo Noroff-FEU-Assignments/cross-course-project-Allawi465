@@ -13,8 +13,10 @@ export function allGames(data) {
         }
 
         allGames.innerHTML += `<div class="games-products">
-                                    <img class="item-images" src="${data[i].images[0].src}" alt="cover-image for the game"/>
-                                    <h3>${data[i].name}</h3>
+                                    <a href="details.html?id=${data[i].id}" class="imglink"> 
+                                        <img class="item-images" src="${data[i].images[0].src}" alt="cover-image for the game"/>
+                                        <h3>${data[i].name}</h3>
+                                    </a> 
                                     <p>Let the gaming begin.</p>
                                     <span class="view-links">
                                         <a href="details.html?id=${data[i].id}" class="view-all">View Game</a>
@@ -38,9 +40,11 @@ export function ViewAllGames(data) {
         const unit = data[i].add_to_cart.minimum;
         
         games.innerHTML += `<div class="games-products">
+                                <a href="details.html?id=${data[i].id}" class="imglink"> 
                                 <img class="item-images" src="${data[i].images[0].src}"alt="cover-image for the game"/>
                                 <h3>${data[i].name}</h3>
                                 <p>${price},- NOK</P>
+                                </a>
                                 <span class="about-link">
                                     <a href="details.html?id=${data[i].id}" class="aboutLink">About</a>
                                 </span>
@@ -57,17 +61,23 @@ export function ViewAllGames(data) {
     });
         
     function onClick() {
+        
         const name = this.dataset.title;
         const image = this.dataset.img;
         const price = this.dataset.price;
         const id = this.dataset.id;
         const unit = this.dataset.unit;
 
+        if (this.innerHTML === "Add to cart") {
+            this.innerHTML = "Added to cart";
+        } else {
+            this.innerHTML = "Add to cart";
+        }
+
         const currentProduct = getItemProduct();
 
         const ItemExists = currentProduct.find(function(item) {
             if (item.id === id) {
-                item.unit ++;
                 return item.id === id;
             }
         })
@@ -76,6 +86,9 @@ export function ViewAllGames(data) {
             const product = { name: name, img: image, price: price, id: id, unit: unit};
             currentProduct.push(product);
             saveProduct(currentProduct);
-        }
+        } else {
+            const newProduct = currentProduct.filter(item => item.id !== id);
+            saveProduct(newProduct);
+          } 
     } 
 };

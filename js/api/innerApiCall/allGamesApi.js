@@ -47,7 +47,3 @@ searchButton.onclick = function() {
     getGames(newurl);
 };
 
-
-
-
-

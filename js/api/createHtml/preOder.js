@@ -8,13 +8,15 @@ export function commingSoon(data) {
     for (let i = 6 ; i < data.length; i++) {
 
     commingSoon.innerHTML += `<div class="games-products">
-                                    <img class="item-images" src="${data[i].images[0].src}" alt="cover-image for the game"/>
-                                    <h3>${data[i].name}</h3>
-                                    <p>Comming Soon</p>
-                                    <span class="view-links">
-                                        <a href="details.html?id=${data[i].id}" class="view-all">View Game</a>
-                                    </span>
-                                  </div>`; 
+                                <a href="details.html?id=${data[i].id}" class="imglink"> 
+                                  <img class="item-images" src="${data[i].images[0].src}" alt="cover-image for the game"/>
+                                  <h3>${data[i].name}</h3>
+                                </a>
+                                <p>Comming Soon</p>
+                                <span class="view-links">
+                                  <a href="details.html?id=${data[i].id}" class="view-all">View Game</a>
+                                </span>
+                                </div>`; 
   }
 };
 
@@ -33,16 +35,18 @@ export function allPreOder(data) {
     const unit = data[i].add_to_cart.minimum;
 
     productContainer.innerHTML += `<div class="games-products">
-                                          <img class="item-images" src="${data[i].images[0].src}" alt="cover-image for the game"/>
-                                          <h3>${data[i].name}</h3>
-                                          <p>${price},- NOK</P>
-                                          <span class="about-link">
-                                            <a href="details.html?id=${data[i].id}" class="aboutLink">About</a>
-                                          </span>
-                                          <span class="cart-link">
-                                            <button class="pre-links" data-img="${image}" data-title="${name}"  data-price="${price}" data-id="${id}" data-unit="${unit}">Add to cart</button>
-                                          </span>
-                                        </div>`; 
+                                    <a href="details.html?id=${data[i].id}" class="imglink"> 
+                                      <img class="item-images" src="${data[i].images[0].src}"alt="cover-image for the game"/>
+                                      <h3>${data[i].name}</h3>
+                                      <p>${price},- NOK</P>
+                                    </a>
+                                    <span class="about-link">
+                                      <a href="details.html?id=${data[i].id}" class="aboutLink">About</a>
+                                    </span>
+                                    <span class="cart-link">
+                                      <button class="pre-links" data-img="${image}" data-title="${name}"  data-price="${price}" data-id="${id}" data-unit="${unit}">Add to cart</button>
+                                    </span>
+                                  </div>`; 
     };
 
     const adButton = document.querySelectorAll(".pre-links");
@@ -58,19 +62,27 @@ export function allPreOder(data) {
       const id = this.dataset.id;
       const unit = this.dataset.unit;
 
+      if (this.innerHTML === "Add to cart") {
+        this.innerHTML = "Added to cart";
+      } else {
+        this.innerHTML = "Add to cart";
+      }
+
       const currentProduct = getItemProduct();
 
       const ItemExists = currentProduct.find(function(item) {
-          return item.name === name;
+        if (item.id === id) {
+          return item.id === id;
+        }
       })
-  
+      
       if (ItemExists === undefined) {
-          const product = { name: name, img: image, price: price, id: id, unit: unit};
-          currentProduct.push(product);
-          saveProduct(currentProduct);
+        const product = { name: name, img: image, price: price, id: id, unit: unit};
+        currentProduct.push(product);
+        saveProduct(currentProduct);
       } else {
-          const newProduct = currentProduct.filter(item => item.id !== id);
-          saveProduct(newProduct);
-      }
-  } 
+        const newProduct = currentProduct.filter(item => item.id !== id);
+        saveProduct(newProduct);
+      } 
+    } 
 };  
