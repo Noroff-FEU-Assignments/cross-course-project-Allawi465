@@ -6,8 +6,6 @@ const categories = document.querySelectorAll(".categories")
 const searchButton = document.querySelector(".searchButton")
 const sorter = document.querySelector(".select");
 
-
-
 const wpUrl = "https://wildflowerpower.site/gamehub/wp-json/wc/store/products";
 
 async function getGames(url) {
