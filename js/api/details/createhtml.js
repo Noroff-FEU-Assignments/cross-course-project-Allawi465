@@ -13,6 +13,7 @@ export function createHTMLDetails(data) {
    productContainer.innerHTML = `<div class="games-products">
                                     <img class="item-images" src="${image}"alt="cover-image for the game"/>
                                     <h2>${data.name}</h2>
+                                    <p>${price},- NOK</P>
                                     <span class="cart-link">
                                        <button class="pre-links" data-img="${image}" data-title="${name}" data-price="${price}" data-id="${id}" data-unit="${unit}">Add to cart</button>
                                     </span>
