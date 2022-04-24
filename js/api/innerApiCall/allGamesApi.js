@@ -4,7 +4,7 @@ const messageCotainer = document.querySelector(".error-message");
 const games = document.querySelector(".games-item");
 const categories = document.querySelectorAll(".categories")
 const searchButton = document.querySelector(".searchButton")
-const sorter = document.querySelector(".select select");
+const sorter = document.querySelector(".select");
 
 
 

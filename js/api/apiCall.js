@@ -14,8 +14,6 @@ async function getGames() {
         
         const data = await response.json();
 
-        console.log(data);
-
         commingSoon(data)
         topSeller(data)
         newDeals(data)
