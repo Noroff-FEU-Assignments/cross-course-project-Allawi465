@@ -2,11 +2,13 @@
 
 ## Description
 
-GameHub is an online shop where users can purchase computer games. This gaming marketplace lets you buy tons of video games online for any device.
+GameHub is an online shop where users can purchase computer games. 
+
+This gaming marketplace lets you buy and trade games from old to new.
 
 This is a course assignment project delivery. 
 
-The project was to crate a website that allows you to purchase new and old games from all the popular consoles as well as PC games.
+The project was to crate a website that allows you to purchase new and old games.
 
 ## Built With
 
