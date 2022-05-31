@@ -46,7 +46,9 @@ npm run start
 
 ## Contributing
 
-If you have a suggestion that would make the site better, please fork the repo and create a pull request. Don't forget to give the project a star! Thanks again!
+If you have a suggestion that would make the site better, please contact me.
+
+Don't forget to give the project a star! Thanks again
 
 ## Contact
 
