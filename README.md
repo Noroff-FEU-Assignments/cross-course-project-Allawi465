@@ -54,6 +54,6 @@ I am very grateful for the feedbacks and the support.
 
 Please contact me if you have any questions!
 
-[Community Science Museum](https://universalofgames.netlify.app)
+[GameHub](https://universalofgames.netlify.app)
 
 [My LinkedIn page](https://www.linkedin.com/in/mohammed-allawi-89830621a/)
