@@ -1,4 +1,5 @@
 # GameHub
+![Skjermbilde (41)](https://user-images.githubusercontent.com/91701833/172930564-42acd15f-3717-417f-90a6-2503ed0f22b9.png)
 
 ## Description
 
@@ -17,32 +18,6 @@ The project was just build with
 - HTML 
 - CSS
 - JavaScript
-
-## Getting Started
-
-### Installing
-
-Feel free to clone the project
-
-1. Clone the repo:
-
-```bash
-https://github.com/Noroff-FEU-Assignments/cross-course-project-Allawi465
-```
-
-2. Install the dependencies:
-
-```
-npm install
-```
-
-### Running
-
-To run the app, run the following commands:
-
-```bash
-npm run start
-```
 
 ## Contributing
 
