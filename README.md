@@ -3,11 +3,11 @@
 
 ## Description
 
+The project was to crate a website that allows you to purchase new and old games.
+
 GameHub is an online shop where users can purchase computer games. 
 
 This gaming marketplace lets you buy and trade games from old to new.
-
-The project was to crate a website that allows you to purchase new and old games.
 
 This is a course assignment project delivery. 
 
